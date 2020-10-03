@@ -1,0 +1,501 @@
+Incident ID,Incident Date,State,City Or County,Address,# Killed,# Injured,Operations
+1812888,"October 3, 2020",Illinois,Chicago,7000 block of S California Ave,0,2,N/A
+1812731,"October 2, 2020",Colorado,Denver,9100 E Florida Ave,0,1,N/A
+1812641,"October 2, 2020",Ohio,Columbus,4000 block of E Livingston Ave,0,1,N/A
+1812594,"October 2, 2020",Virginia,Newport News,1300 block of 23rd St,0,3,N/A
+1811976,"October 2, 2020",Texas,Houston,3000 block of Roe Dr,0,1,N/A
+1813150,"October 2, 2020",Ohio,Cleveland,W 25th St and Division Ave,0,1,N/A
+1812985,"October 2, 2020",California,Berkeley,2300 block of 8th St,0,1,N/A
+1812693,"October 2, 2020",Illinois,Chicago,6600 block of S Oakley Ave,1,1,N/A
+1812838,"October 2, 2020",Washington,Seattle,9700 block of 59th Ave S,0,4,N/A
+1812183,"October 1, 2020",California,Pomona,Lincoln Ave and Caswell Ave,0,1,N/A
+1811772,"October 1, 2020",Texas,Fort Worth,3254 Las Vegas Trl,0,1,N/A
+1810687,"September 30, 2020",Missouri,Saint Louis (University City),7500 block of Carleton Ave,0,3,N/A
+1811038,"September 30, 2020",Maryland,Hyattsville,3200 block of Toledo Pl,0,1,N/A
+1810676,"September 30, 2020",Connecticut,Hartford,600 block of Albany Ave,0,3,N/A
+1810939,"September 30, 2020",Maryland,Baltimore,1700 block of Ramsey St,0,1,N/A
+1810730,"September 30, 2020",Kentucky,Lexington,441 Redding Rd,0,1,N/A
+1810175,"September 29, 2020",South Carolina,Georgetown,Sabine Dr,0,1,N/A
+1810117,"September 29, 2020",Georgia,Augusta,Basswood Dr,0,1,N/A
+1809724,"September 29, 2020",California,Desert Hot Springs,12800 W Arroyo Dr,0,1,N/A
+1810047,"September 29, 2020",Connecticut,Hartford,116 Bedford St,0,1,N/A
+1809950,"September 29, 2020",Nevada,Las Vegas,Neches Ave and Cochiti Lake St,0,2,N/A
+1809810,"September 29, 2020",South Carolina,Georgetown,Carnell Loop,0,1,N/A
+1809787,"September 29, 2020",Louisiana,New Orleans,2000 block of Magic St,0,2,N/A
+1809248,"September 29, 2020",California,San Jose,McLaughlin Ave and Story Rd,0,1,N/A
+1808348,"September 28, 2020",Utah,Ogden,22nd St and Monroe Blvd,0,2,N/A
+1809547,"September 28, 2020",Mississippi,Batesville,Fisher St,0,2,N/A
+1808362,"September 28, 2020",California,Modesto,5800 block of S Carpenter Rd,0,2,N/A
+1809161,"September 28, 2020",Louisiana,Monroe,5400 block of Long Dr,0,1,N/A
+1809410,"September 28, 2020",Arizona,Peoria,W Monroe St and N 87th Ave,0,1,N/A
+1808782,"September 28, 2020",Florida,Orlando,2300 block of Lake Weston Dr,0,2,N/A
+1807168,"September 27, 2020",Pennsylvania,Lancaster,1400 block of Old Lampeter Rd,0,2,N/A
+1808410,"September 27, 2020",Arkansas,Little Rock,N/A,0,1,N/A
+1807230,"September 27, 2020",Mississippi,Gulfport,8400 block of US 49,0,2,N/A
+1808130,"September 27, 2020",Nebraska,Omaha,Ernst St and N 50th St,0,1,N/A
+1806929,"September 27, 2020",Illinois,Chicago,24 E 123rd St,0,2,N/A
+1808029,"September 27, 2020",South Carolina,Rock Hill,600 Block of S Wilson St,0,1,N/A
+1806844,"September 27, 2020",Ohio,Dayton,2900 block of Wexford Pl,0,1,N/A
+1807084,"September 27, 2020",Tennessee,Memphis,3120 S 3rd St,1,1,N/A
+1810243,"September 27, 2020",North Carolina,Asheboro,700 block of Tucker St,0,3,N/A
+1806599,"September 27, 2020",Illinois,Chicago,1300 block of W 64th St,0,1,N/A
+1807412,"September 27, 2020",Illinois,Chicago,7000 block of S Kingston Ave,0,1,N/A
+1808695,"September 27, 2020",Oregon,Beaverton (Aloha),17851 SW Kinnaman Rd,0,1,N/A
+1807255,"September 27, 2020",Louisiana,New Orleans,7300 block of Read Blvd,0,1,N/A
+1807105,"September 27, 2020",Virginia,Norfolk,N/A,0,1,N/A
+1809689,"September 27, 2020",California,Stockton,7000 block of Tristan Circle,0,1,N/A
+1807066,"September 26, 2020",Tennessee,Chattanooga,2000 block of Rawlings St,0,2,N/A
+1806259,"September 26, 2020",California,Oakland,7600 block of San Leandro St,0,2,N/A
+1807046,"September 26, 2020",Pennsylvania,Philadelphia,100 block of N Lindenwood St,0,4,N/A
+1806141,"September 26, 2020",Virginia,Portsmouth,Afton Pkwy,0,1,N/A
+1806205,"September 26, 2020",District of Columbia,Washington,14th St NW and Fairmount St NW,0,1,N/A
+1806186,"September 26, 2020",Tennessee,Memphis,1330 James St,0,1,N/A
+1806063,"September 26, 2020",Tennessee,Memphis,200 block of Cypresswood Cove,0,1,N/A
+1806484,"September 26, 2020",Texas,Odessa,1800 block of E 49th St,1,2,N/A
+1806751,"September 26, 2020",Michigan,Roseville,1700 block of Ivanhoe St,0,1,N/A
+1807853,"September 26, 2020",Florida,Quincy,1300 block of Elm St,0,1,N/A
+1807695,"September 26, 2020",Florida,Gainesville,1005 W University Ave,0,2,N/A
+1806572,"September 26, 2020",Illinois,Chicago,3200 block of S Morgan St,0,2,N/A
+1806670,"September 26, 2020",Wisconsin,Milwaukee,S 35th St and W St Paul Ave,0,1,N/A
+1806424,"September 25, 2020",Michigan,Detroit,Smart St and McDonald St,0,1,N/A
+1805452,"September 25, 2020",New York,Brooklyn,Atlantic Ave and Eastern Pkwy,0,1,N/A
+1806096,"September 25, 2020",New York,New York (Manhattan),W 153rd St and Frederick Douglass Blvd,0,1,N/A
+1805995,"September 25, 2020",Ohio,Toledo,1717 Fielding Ave,0,1,N/A
+1806727,"September 25, 2020",Iowa,Waterloo,N/A,0,1,N/A
+1804844,"September 25, 2020",Massachusetts,Boston,Old Colony Ave and Patterson Way,0,1,N/A
+1805839,"September 25, 2020",New Jersey,Westville,1102 Crown Point Rd,0,3,N/A
+1806500,"September 25, 2020",Pennsylvania,Philadelphia,1300 block of Sanger St,0,4,N/A
+1806454,"September 25, 2020",Michigan,Flint,7000 block of Yorkshire Dr,0,2,N/A
+1805356,"September 24, 2020",Tennessee,Nashville,1309 Murfreesboro Pike,0,1,N/A
+1805461,"September 24, 2020",Texas,San Antonio,Perrin Beitel Rd and Thousand Oaks Dr,0,1,N/A
+1804406,"September 24, 2020",Wisconsin,Milwaukee,5100 block of W North Ave,0,1,N/A
+1805370,"September 24, 2020",Georgia,Riverdale,100 block of Brookview Dr,0,1,N/A
+1805337,"September 24, 2020",Texas,Carrollton,2250 Ridgedale Dr,0,2,N/A
+1804251,"September 24, 2020",Michigan,Detroit,1300 block of W Forest Ave,0,2,N/A
+1805408,"September 24, 2020",Georgia,Macon,3389 Sherry Dr,0,1,N/A
+1803917,"September 24, 2020",Connecticut,New Haven,Sherman Ave,0,1,N/A
+1804675,"September 24, 2020",Kentucky,Erlanger,3400 block of Bluecreek Dr,0,2,N/A
+1804280,"September 23, 2020",Michigan,Jackson,1000 block of Maple Ave,0,1,N/A
+1804829,"September 23, 2020",Florida,West Palm Beach,2100 block of N Tamarind Ave,0,3,N/A
+1804190,"September 23, 2020",Tennessee,Memphis,Parkrose Rd,0,1,N/A
+1804601,"September 23, 2020",Alabama,Mobile,2400 block of Octavia Dr S,0,1,N/A
+1804585,"September 23, 2020",Delaware,Wilmington,4817 Governor Printz Blvd,0,3,N/A
+1803459,"September 23, 2020",Virginia,Norfolk,500 block of Nicholson St,0,1,N/A
+1803545,"September 23, 2020",Wisconsin,Milwaukee,N/A,0,1,N/A
+1802440,"September 22, 2020",Minnesota,Saint Paul,W Wheelock Pkwy,0,1,N/A
+1802901,"September 22, 2020",Illinois,Chicago,101 N Western Ave,1,1,N/A
+1802914,"September 22, 2020",Illinois,Chicago,1400 block of W Erie St,0,1,N/A
+1802912,"September 22, 2020",Connecticut,Hartford,126 Brook St,0,1,N/A
+1802872,"September 22, 2020",Minnesota,Minneapolis,3700 block of Morgan Ave N,0,2,N/A
+1802490,"September 22, 2020",Missouri,Saint Louis (Jennings),5700 block of Helen Ave,0,2,N/A
+1803463,"September 22, 2020",Virginia,Norfolk,800 block of E Princess Anne Rd,0,1,N/A
+1802283,"September 21, 2020",New York,Port Jervis,Barcelow St and Seward Ave,0,2,N/A
+1801490,"September 21, 2020",Illinois,Chicago,6000 block of S Morgan St,0,1,N/A
+1801178,"September 21, 2020",Pennsylvania,Philadelphia,2000 block of Sigel St,0,1,N/A
+1802092,"September 21, 2020",Missouri,Saint Louis,I-70 and S Grand Ave,0,1,N/A
+1800918,"September 21, 2020",North Carolina,Durham,600 block of Oxford Rd,0,1,N/A
+1801891,"September 21, 2020",Florida,Orlando,1600 Block of Glendale Rd,1,1,N/A
+1801708,"September 21, 2020",Texas,Tyler,5100 Sweetbriar Ln,0,1,N/A
+1802608,"September 21, 2020",Texas,Houston,12500 Dunlap St,0,1,N/A
+1802595,"September 21, 2020",Texas,Waxahachie,300 block of Chapel Hill Ln,0,1,N/A
+1801653,"September 21, 2020",Colorado,Denver,100 block of N Winona Ct,0,2,N/A
+1801726,"September 20, 2020",Arkansas,Little Rock,2000 Boyle Park Rd,0,3,N/A
+1800542,"September 20, 2020",New York,Rochester,Lill St,0,1,N/A
+1801093,"September 20, 2020",North Carolina,Kinston,Mitchell Wooten Ct,0,1,N/A
+1800823,"September 20, 2020",Florida,Melbourne,1488 Aurora Rd,0,2,N/A
+1800537,"September 20, 2020",Alabama,Birmingham,31 4th Ct W,1,2,N/A
+1802569,"September 20, 2020",California,Santa Maria,400 block of E Orange St,0,1,N/A
+1800835,"September 20, 2020",Tennessee,Antioch,5434 Bell Forge Ln E,0,1,N/A
+1805529,"September 19, 2020",New York,Buffalo (Kenmore),3115 Delaware Ave,0,2,N/A
+1800073,"September 19, 2020",New York,Brooklyn,135 Richards St,0,1,N/A
+1799712,"September 19, 2020",Alabama,Samson,Brunson Ct,0,1,N/A
+1799675,"September 19, 2020",Kansas,Wichita,N Grove St and E Shadybrook St,0,1,N/A
+1799307,"September 19, 2020",New York,Rochester,278 Pennsylvania Ave,2,14,N/A
+1800333,"September 19, 2020",Nevada,Las Vegas,9600 block of Bouncing Ball St,0,1,N/A
+1801252,"September 19, 2020",Massachusetts,Swampscott,Burill St and Maple Ave,0,1,N/A
+1799462,"September 19, 2020",Illinois,Chicago,5000 block of W Monroe St,0,1,N/A
+1800080,"September 19, 2020",Louisiana,Shreveport,3500 block of Southern Ave,0,1,N/A
+1812724,"September 18, 2020",Colorado,Littleton,S Simms St and W Ken Caryl Ave,0,1,N/A
+1799114,"September 18, 2020",Illinois,Chicago,10600 block of S Bensley Ave,0,1,N/A
+1799690,"September 18, 2020",Texas,Houston,500 block of Northvalley Dr,0,1,N/A
+1799823,"September 18, 2020",District of Columbia,Washington,4200 block of Minnesota Ave NE,0,1,N/A
+1799342,"September 18, 2020",District of Columbia,Washington,300 block of 50th St NE,0,1,N/A
+1799582,"September 18, 2020",Ohio,Dayton,126  W 5th St,0,1,N/A
+1800094,"September 18, 2020",Louisiana,New Orleans,1600 block of Egania St,0,1,N/A
+1800061,"September 18, 2020",Colorado,Denver,1600 block of Tennyson St,0,2,N/A
+1798565,"September 17, 2020",South Carolina,Eastover,200 block of Lewis Scott Ct,0,1,N/A
+1798184,"September 17, 2020",Virginia,Portsmouth,2600 block of Frederick Blvd,0,1,N/A
+1799612,"September 17, 2020",Wisconsin,Milwaukee,3500 block of W Lisbon Ave,0,1,N/A
+1798064,"September 17, 2020",Colorado,Commerce City,6000 block of US-85,0,2,N/A
+1798642,"September 17, 2020",Mississippi,Gulfport,2600 block of W David Dr,0,2,N/A
+1798388,"September 17, 2020",Mississippi,Jackson,5800 block of Ridgewood Rd,0,1,N/A
+1798487,"September 17, 2020",Ohio,Cleveland,7310 Carson Ave,1,2,N/A
+1800126,"September 17, 2020",Louisiana,Slidell,1110 Brownswitch Rd,0,1,N/A
+1797607,"September 16, 2020",Minnesota,Minneapolis,2900 block of N Logan Ave,0,1,N/A
+1798390,"September 16, 2020",Wisconsin,Milwaukee,N Hopkins St and W Custer Ave,0,1,N/A
+1797413,"September 16, 2020",Illinois,Chicago,434 W 118th St,0,1,N/A
+1798868,"September 16, 2020",California,Tulare,1445 Retherford St,0,1,N/A
+1797992,"September 16, 2020",Missouri,Saint Louis,5500 block of Virginia Ave,0,1,N/A
+1797597,"September 16, 2020",Minnesota,Minneapolis,2500 block of Aldrich Ave,0,1,N/A
+1798611,"September 16, 2020",Ohio,Dayton,400 block of W Norman Ave,0,1,N/A
+1798430,"September 16, 2020",Louisiana,New Orleans (Algiers),1800 block of Casa Calvo St,0,1,N/A
+1796071,"September 15, 2020",Oklahoma,Oklahoma City,10735 N Western Ave,0,1,N/A
+1796617,"September 15, 2020",Illinois,Chicago,6428 S King Dr,0,3,N/A
+1796638,"September 15, 2020",Illinois,Chicago,3500 block of W Lawrence Ave,0,5,N/A
+1797047,"September 15, 2020",North Carolina,Asheville,Scott St,0,1,N/A
+1798494,"September 15, 2020",Ohio,Akron,400 block of Sumner St,0,1,N/A
+1796562,"September 15, 2020",Louisiana,New Orleans,I-10 Service Rd and Crowder Blvd,0,1,N/A
+1796321,"September 14, 2020",North Carolina,Durham,Delano St,0,1,N/A
+1796319,"September 14, 2020",North Carolina,Durham,N/A,0,1,N/A
+1794920,"September 14, 2020",Iowa,Des Moines,1400 block of 13th St,1,1,N/A
+1795814,"September 14, 2020",Illinois,Chicago,400 block of S Keeler Ave,0,1,N/A
+1795463,"September 14, 2020",Louisiana,Mamou,N/A,0,2,N/A
+1795449,"September 14, 2020",Louisiana,Baton Rouge,Dalton St,0,2,N/A
+1795399,"September 14, 2020",Alabama,Huntsville,1225 Willowbrook Dr SE,0,1,N/A
+1794105,"September 13, 2020",New York,Elmira,466 Franklin St,0,2,N/A
+1797320,"September 13, 2020",Ohio,Canton,2400 block of 8th St NW,0,2,N/A
+1796056,"September 13, 2020",South Carolina,Columbia,2320 Legrand Rd,0,1,N/A
+1794629,"September 13, 2020",Arizona,Phoenix,N 31st Ave and W Dunlap Ave,0,2,N/A
+1794634,"September 13, 2020",Arizona,Phoenix,S 20th St and E Southern Ave,1,1,N/A
+1794550,"September 13, 2020",California,Pasadena,300 block of E Villa St,0,2,N/A
+1794537,"September 13, 2020",California,Los Angeles,Main St and Century Blvd,0,1,N/A
+1796773,"September 13, 2020",Florida,Fort Myers,2930 Thomas St,0,1,N/A
+1794086,"September 13, 2020",Illinois,Chicago,6100 block of S Throop St,1,3,N/A
+1795546,"September 13, 2020",Ohio,Columbus,1144 E Como Rd,0,1,N/A
+1794389,"September 13, 2020",Colorado,Aurora,18000 block of E Kentucky Ave,0,1,N/A
+1794375,"September 13, 2020",Colorado,Colorado Springs,7040 Rangewood Dr,0,1,N/A
+1794324,"September 12, 2020",Virginia,Richmond,3300 block of Walmsley Blvd,0,1,N/A
+1793333,"September 12, 2020",Oklahoma,Tulsa,2115 Martin Luther King Jr Blvd,0,1,N/A
+1793275,"September 12, 2020",Michigan,Kalamazoo,1100 block of James St,0,1,N/A
+1793771,"September 12, 2020",Pennsylvania,Philadelphia,N 18th St and Dauphin St,0,3,N/A
+1792859,"September 12, 2020",Wisconsin,Milwaukee,S 23rd St and W Middlemass St,0,1,N/A
+1793680,"September 12, 2020",North Carolina,Wilson,200 block of Dewey St,0,5,N/A
+1795541,"September 12, 2020",Ohio,Canton,2400 block of 8th St NW,0,2,N/A
+1808587,"September 12, 2020",Texas,Houston,12375 Martin Luther King Blvd,0,3,N/A
+1792624,"September 11, 2020",Louisiana,Donaldsonville,St Elizabeth St and Front St,0,5,N/A
+1793267,"September 11, 2020",Michigan,Kalamazoo,1400 block of Portage Rd,0,2,N/A
+1793163,"September 11, 2020",Virginia,Portsmouth,N/A,0,1,N/A
+1797264,"September 11, 2020",Louisiana,Monroe,1300 block of S 1st St,0,1,N/A
+1792664,"September 11, 2020",Pennsylvania,Philadelphia,5700 block of Filbert St,0,1,N/A
+1791161,"September 10, 2020",District of Columbia,Washington,4400 block of 3rd St NW,0,1,N/A
+1791740,"September 10, 2020",Florida,Apopka,500 Block of W Ella J Gilmore St,0,1,N/A
+1790818,"September 10, 2020",Michigan,Benton Harbor,M-139 and E Empire Ave,0,1,N/A
+1791734,"September 10, 2020",Missouri,Saint Louis,900 block of Manhattan Pl,0,1,N/A
+1789895,"September 9, 2020",Illinois,Chicago,9020 S Woodlawn Ave,0,1,N/A
+1790035,"September 9, 2020",Illinois,Chicago,6700 block of S Jeffery Blvd,0,1,N/A
+1789675,"September 9, 2020",Georgia,Atlanta,3015 Jonesboro Rd,0,2,N/A
+1790530,"September 9, 2020",Louisiana,Baton Rouge,2500 block of Jefferson Ave,0,1,N/A
+1789376,"September 8, 2020",New York,Buffalo,Kensington Ave and Godfrey St,0,1,N/A
+1789284,"September 8, 2020",Indiana,Indianapolis,N/A,0,1,N/A
+1789262,"September 8, 2020",Arizona,Safford,1600 block of S 8th Ave,0,1,N/A
+1789693,"September 8, 2020",Texas,Houston,3100 block of Alabama St,0,3,N/A
+1788401,"September 8, 2020",Maryland,Baltimore,2300 block of Greenmount Ave,0,5,N/A
+1790599,"September 8, 2020",Ohio,Youngstown,Cleveland St,1,1,N/A
+1790583,"September 8, 2020",Alabama,Mobile,Broad St,0,1,N/A
+1789521,"September 8, 2020",Pennsylvania,Philadelphia,4300 block of Parrish St,0,1,N/A
+1789230,"September 7, 2020",California,Moreno Valley,22900 block of Allies Place,1,2,N/A
+1788053,"September 7, 2020",Louisiana,Baton Rouge,1500 block of N 47th St,0,1,N/A
+1789407,"September 7, 2020",Michigan,Grand Rapids,Calvin Ave SE and Adams St SE,0,1,N/A
+1788168,"September 7, 2020",Louisiana,New Orleans,1500 block of Freret St,0,4,N/A
+1790220,"September 7, 2020",New Mexico,Roswell,1600 block of W College Blvd,0,2,N/A
+1790019,"September 7, 2020",South Carolina,Summerville,651 Wassamassaw Rd,0,1,N/A
+1788453,"September 7, 2020",Ohio,Cincinnati,W McMillan St,0,3,N/A
+1788424,"September 7, 2020",Massachusetts,Boston,Parker st and Smith st,0,1,N/A
+1788390,"September 7, 2020",Florida,Orlando,4400 block of Prince Hall Blvd,0,1,N/A
+1787208,"September 7, 2020",Tennessee,Nashville,345 Dellway Villa Rd,0,1,N/A
+1789469,"September 7, 2020",Texas,Wylie,1500 block of Park Blvd,0,1,N/A
+1786920,"September 6, 2020",Illinois,Chicago,S Kingston Ave and E 77th St,0,4,N/A
+1786771,"September 6, 2020",Michigan,Kalamazoo,4346 Hidden Hills Dr,0,2,N/A
+1786596,"September 6, 2020",Louisiana,New Orleans,2000 block of Saint Roch Ave,0,1,N/A
+1787297,"September 6, 2020",Georgia,Hinesville,Saunders Ave,0,1,N/A
+1787270,"September 6, 2020",South Carolina,North Charleston,6907 Dorchester Rd,0,2,N/A
+1789539,"September 6, 2020",Pennsylvania,York,800 block of W Princess St,0,1,N/A
+1787048,"September 5, 2020",Pennsylvania,Philadelphia,600 block of E Clearfied St,0,1,N/A
+1786609,"September 5, 2020",Georgia,Atlanta,2500 Center St,0,1,N/A
+1790062,"September 5, 2020",South Carolina,Orangeburg,Whaley St,0,1,N/A
+1787468,"September 5, 2020",North Carolina,Durham,910 E Main St,0,2,N/A
+1786428,"September 5, 2020",Illinois,Chicago,4000 S Lake Park Ave,0,1,N/A
+1785663,"September 5, 2020",Illinois,Chicago,200 block of S Ashland Ave,0,1,N/A
+1785656,"September 5, 2020",Illinois,Chicago,1900 block of W Augusta Blvd,0,1,N/A
+1786806,"September 5, 2020",Arkansas,Little Rock,400 President Clinton Ave,0,4,N/A
+1786227,"September 4, 2020",Michigan,Grand Rapids,Madison Ave and Garden St,0,1,N/A
+1785494,"September 4, 2020",Nebraska,Omaha,Burdette St and N 16th St,0,1,N/A
+1785254,"September 4, 2020",New Mexico,Roswell,300 block of E 6th St,0,1,N/A
+1785653,"September 4, 2020",Utah,Salt Lake City,500 S Navajo St,0,1,N/A
+1785166,"September 4, 2020",Kentucky,Louisville,2400 Portland Ave,0,2,N/A
+1785787,"September 4, 2020",Maryland,Halethorpe (Lansdowne),50 block of Babybird Ct,0,2,N/A
+1785750,"September 4, 2020",Pennsylvania,Philadelphia,4300 block of Parrish St,0,2,N/A
+1784414,"September 3, 2020",Illinois,Chicago,7900 block of S Dante Ave,0,1,N/A
+1784523,"September 3, 2020",Texas,Waco (Bellmead),1400 block of Lisa St,0,1,N/A
+1784250,"September 3, 2020",Pennsylvania,York,600 block of W King St,0,1,N/A
+1785240,"September 3, 2020",Texas,Houston,7800 block of Faulkner St,0,1,N/A
+1785778,"September 3, 2020",Illinois,Joliet,200 block of Illinois St,0,1,N/A
+1784986,"September 3, 2020",Arizona,Tucson,S Midvale Park Rd and W Headley Place,0,1,N/A
+1785044,"September 3, 2020",Missouri,Saint Louis,2500 block of Hodiamont Ave,2,1,N/A
+1785739,"September 3, 2020",Illinois,Madison,1500 block of 4th St,0,1,N/A
+1785593,"September 3, 2020",Arkansas,Little Rock,19 Nandina Cir,0,4,N/A
+1786203,"September 2, 2020",California,Richmond,4800 block of Harnett Ave,1,1,N/A
+1783424,"September 2, 2020",Texas,San Antonio,6301 NW Loop 410,0,1,N/A
+1783342,"September 2, 2020",Illinois,Chicago,917 S Kedzie Ave,0,1,N/A
+1783273,"September 2, 2020",Michigan,Grand Rapids,Horton Ave SE and Andre St SE,0,1,N/A
+1783582,"September 2, 2020",Pennsylvania,Philadelphia,1800 block of Moore St,2,2,N/A
+1784141,"September 2, 2020",Georgia,Albany,1400 block of E Residence Ave,1,3,N/A
+1783928,"September 2, 2020",California,Oakland,Kerwin Ave and 105th Ave,0,4,N/A
+1783916,"September 2, 2020",California,Santa Ana,9 MacArthur Place,0,3,N/A
+1783540,"September 1, 2020",South Dakota,Sioux Falls,700 block of W 13th St,0,1,N/A
+1782007,"September 1, 2020",Virginia,Richmond,2300 block of Fairfield Ave,0,2,N/A
+1782149,"September 1, 2020",Illinois,Chicago,1400 block of W 17th St,0,1,N/A
+1781819,"September 1, 2020",Connecticut,Derby,N/A,0,1,N/A
+1782788,"September 1, 2020",Maryland,Halethorpe (Lansdowne),3900 block of Hollins Ferry Rd,0,2,N/A
+1782544,"September 1, 2020",Alabama,Mobile,Dauphin Island Pkwy and McVay Dr N,1,1,N/A
+1780365,"August 31, 2020",Minnesota,Minneapolis (Bloomington),8300 block of 15th Ave,1,2,N/A
+1782233,"August 31, 2020",Illinois,Rockford,1400 block of Broadway,0,2,N/A
+1782059,"August 31, 2020",Pennsylvania,Pittsburgh (Mt Oliver),200 block of Anthony St,0,1,N/A
+1781165,"August 31, 2020",Tennessee,Chattanooga,2409 Dodson Ave,0,2,N/A
+1782962,"August 31, 2020",Florida,Tallahassee,2660 Old Bainbridge Rd,0,4,N/A
+1781263,"August 31, 2020",Missouri,Saint Louis,3700 block of Nebraska Ave,0,1,N/A
+1782554,"August 31, 2020",New Jersey,Atlantic City,500 block of Indiana Ave,0,1,N/A
+1780701,"August 30, 2020",Minnesota,Minneapolis,8340 15th Ave S,1,2,N/A
+1780947,"August 30, 2020",California,Coachella,Avenida de Plata and Ave 50,0,1,N/A
+1779599,"August 30, 2020",New York,Brooklyn,Myrtle Ave and Washington Park,0,3,N/A
+1783415,"August 30, 2020",Iowa,Davenport,200 W 31st St,0,1,N/A
+1782989,"August 30, 2020",Minnesota,Saint Paul,Cesar Chavez St and S Robert St,0,1,N/A
+1780509,"August 30, 2020",North Carolina,Durham,Moore Place and Lawson St,0,1,N/A
+1780415,"August 30, 2020",Washington,Renton,500 block of S Grady Way,1,2,N/A
+1780404,"August 30, 2020",Illinois,Chicago,1200 block of E 63rd St,0,1,N/A
+1781356,"August 30, 2020",Wisconsin,Milwaukee,58th St and Congress St,1,1,N/A
+1780091,"August 30, 2020",Kentucky,Madisonville,400 block of Elm St,0,5,N/A
+1780789,"August 30, 2020",Tennessee,Nashville,803 Dickerson Pike,0,1,N/A
+1781099,"August 29, 2020",Nebraska,Lincoln,O St,0,1,N/A
+1779080,"August 29, 2020",Virginia,Richmond,2100 block of Accommodation St,0,1,N/A
+1778564,"August 29, 2020",Ohio,Toledo,1200 block of Upton Ave,1,1,N/A
+1779522,"August 29, 2020",Wisconsin,Racine,Pearl St and 10th St,0,1,N/A
+1780452,"August 29, 2020",Georgia,Atlanta (East Point),3480 Camp Creek Pkwy,0,1,N/A
+1782550,"August 29, 2020",New Jersey,Atlantic City,500 block of New York Ave,0,1,N/A
+1779285,"August 29, 2020",Missouri,Saint Louis,4199 Manchester Ave,0,3,N/A
+1778305,"August 28, 2020",Georgia,Decatur,4100 Glenwood Rd,0,1,N/A
+1778449,"August 28, 2020",Texas,Rosenberg,1216 Westwood Dr,0,1,N/A
+1778696,"August 28, 2020",Missouri,Saint Louis,Carr St and Lumiere Pl Blvd,0,1,N/A
+1778670,"August 28, 2020",Pennsylvania,Pittsburgh,3000 block of Landis St,0,1,N/A
+1784991,"August 28, 2020",Ohio,Toledo,1200 block of Upton Ave,1,1,N/A
+1782731,"August 28, 2020",Florida,Williston,N/A,0,1,N/A
+1778227,"August 28, 2020",Illinois,Chicago,3700 W Wellington Ave,0,1,N/A
+1777765,"August 28, 2020",Missouri,Saint Louis,3700 block of Tholozan Ave,0,1,N/A
+1777570,"August 27, 2020",North Carolina,Wilmington,500 block of Anderson St,0,1,N/A
+1778293,"August 27, 2020",New York,Buffalo,100 block of Albert Ave,0,1,N/A
+1776529,"August 27, 2020",Maryland,District Heights,3300 Walter Ln,0,1,N/A
+1776947,"August 26, 2020",Florida,Orlando,2601 Orange Center Blvd,0,1,N/A
+1776021,"August 26, 2020",Wisconsin,Milwaukee,N/A,0,1,N/A
+1776435,"August 26, 2020",Oklahoma,Tulsa,2171 N Hartford Ave,0,1,N/A
+1776005,"August 26, 2020",Indiana,Indianapolis,4500 block of E 16th St,0,2,N/A
+1776508,"August 26, 2020",Maryland,Baltimore,50 block of Abington Ave,0,2,N/A
+1776669,"August 26, 2020",Illinois,Chicago,7300 block of S Claremont Ave,1,1,N/A
+1777302,"August 26, 2020",Louisiana,Baton Rouge,4900 block of Mohican St,0,1,N/A
+1777400,"August 26, 2020",Pennsylvania,Philadelphia,5500 block of Chew Ave,0,4,N/A
+1775204,"August 25, 2020",Tennessee,Memphis,2454 Elvis Presley Blvd,0,1,N/A
+1774463,"August 25, 2020",Pennsylvania,Philadelphia,6500 block of N 21st St,0,1,N/A
+1774853,"August 25, 2020",Kansas,Kansas City,900 block of S 11th St,1,1,N/A
+1775444,"August 25, 2020",Pennsylvania,Philadelphia,4100 block of Old York Rd,0,1,N/A
+1776497,"August 25, 2020",New York,Central Islip,E Suffolk Ave,0,1,N/A
+1773940,"August 24, 2020",Illinois,Chicago,3900 block of  Gladys Ave,0,2,N/A
+1775061,"August 24, 2020",Illinois,East Saint Louis (Cahokia),1100 block of Saint Bartholomew Dr,0,1,N/A
+1774847,"August 24, 2020",Illinois,Chicago,5900 block of Madison St,0,3,N/A
+1775025,"August 24, 2020",Illinois,Chicago,6800 block of S Loomis Blvd,0,2,N/A
+1773332,"August 24, 2020",Michigan,Detroit,13500 block of Puritan Ave,0,1,N/A
+1774668,"August 24, 2020",Mississippi,Jackson,Ellis Ave and Lynch St,0,2,N/A
+1774611,"August 24, 2020",Delaware,Wilmington,Edgemoor Rd and Marsh Rd,0,1,N/A
+1774572,"August 24, 2020",New York,Brooklyn,184 Tapscott St,0,2,N/A
+1773023,"August 24, 2020",Illinois,Chicago,7900 block of S Merrill Ave,0,2,N/A
+1774204,"August 24, 2020",Oklahoma,Oklahoma City,4610 S Youngs Blvd,0,2,N/A
+1773996,"August 24, 2020",Virginia,Richmond,2300 block of Bethel St,1,4,N/A
+1772710,"August 23, 2020",Virginia,Hampton,200 block of Union St,0,1,N/A
+1772510,"August 23, 2020",Kentucky,Lexington,3401 Nicholasville Rd,1,2,N/A
+1772611,"August 23, 2020",Pennsylvania,Philadelphia,5100 block of Lancaster Ave,0,2,N/A
+1772556,"August 23, 2020",Michigan,Grand Rapids,700 block of 11th St NW,0,1,N/A
+1773311,"August 23, 2020",Michigan,Detroit,300 block of Monroe St,0,2,N/A
+1773156,"August 23, 2020",Wisconsin,Milwaukee,S 33rd St and W Scott St,0,1,N/A
+1773171,"August 23, 2020",California,Lamont,8300 block of Segrue Rd,0,1,N/A
+1772302,"August 23, 2020",Florida,Jacksonville,N/A,0,1,N/A
+1773016,"August 23, 2020",Illinois,Chicago,600 block of S Central Ave,0,1,N/A
+1772934,"August 23, 2020",Colorado,Pueblo,2000 block of Longhorn Point,0,6,N/A
+1774322,"August 23, 2020",Ohio,Columbus,Joyce Ave and Denune Ave,0,1,N/A
+1774040,"August 23, 2020",Texas,Houston,12170 Almeda Dr,0,1,N/A
+1772532,"August 22, 2020",New York,Brooklyn,918 Schenectady Ave,0,1,N/A
+1772502,"August 22, 2020",Wisconsin,Milwaukee,1200 block of S 33rd St,0,1,N/A
+1771577,"August 22, 2020",Georgia,Augusta,100 block of E Chapman St,0,1,N/A
+1772275,"August 22, 2020",Illinois,Chicago,4700 block of W Chicago Ave,0,1,N/A
+1772232,"August 22, 2020",Indiana,Indianapolis,10 E Market St,0,1,N/A
+1772135,"August 21, 2020",Ohio,Akron,2000 block of 13th St,0,2,N/A
+1771345,"August 21, 2020",New York,Buffalo,10 Thomas St,0,1,N/A
+1771249,"August 21, 2020",Virginia,Petersburg,Graham Rd and S Crater Rd,0,1,N/A
+1770976,"August 21, 2020",Illinois,Chicago,7000 block of S Morgan St,0,1,N/A
+1770972,"August 21, 2020",Illinois,Chicago,6500 block of S Hamlin Ave,0,1,N/A
+1771537,"August 21, 2020",Oregon,Portland,7200 block of SE Woodstock Blvd,0,1,N/A
+1770427,"August 21, 2020",Missouri,Saint Louis (Bellefontaine Neighbors),Lewis and Clark Blvd and I-270,0,2,N/A
+1771440,"August 21, 2020",Tennessee,Memphis,4000 block of Southlawn Ave,0,2,N/A
+1777366,"August 20, 2020",Tennessee,Nashville,1300 block of Westchester Dr,0,1,N/A
+1770853,"August 20, 2020",Michigan,Detroit,3700 block of 3 Mile Dr,0,1,N/A
+1770700,"August 20, 2020",Georgia,Macon,2560 Rocky Creek Rd,0,2,N/A
+1770436,"August 20, 2020",Illinois,Chicago,7900 block of S Pulaski Rd,0,1,N/A
+1770017,"August 20, 2020",Maryland,Baltimore,100 block of S Morley St,0,1,N/A
+1769303,"August 19, 2020",Oklahoma,Oklahoma City,1300 block of E Madison St,0,1,N/A
+1770093,"August 19, 2020",Minnesota,Saint Paul,1700 block of Rose Ave,0,1,N/A
+1769180,"August 19, 2020",Colorado,Denver,4600 block of N Thompson Ct,0,1,N/A
+1769938,"August 19, 2020",New York,Corona (Queens),146th St and Archer Ave,0,2,N/A
+1769452,"August 19, 2020",Pennsylvania,Philadelphia,1200 block of N Hutchinson St,0,3,N/A
+1769538,"August 19, 2020",Wisconsin,Kenosha,61st St and 11th Ave,1,1,N/A
+1769444,"August 19, 2020",Pennsylvania,Philadelphia,700 block of S 55th St,0,4,N/A
+1769489,"August 19, 2020",Illinois,Chicago,8500 block of S Parnell Ave,0,6,N/A
+1769410,"August 19, 2020",Ohio,Columbus,789 Greenfield Dr,0,1,N/A
+1769405,"August 19, 2020",Arkansas,Strong,100 block of Hickory St,0,2,N/A
+1768259,"August 18, 2020",California,Long Beach,I-710,0,1,N/A
+1768178,"August 18, 2020",Pennsylvania,Philadelphia,2100 block of N 5th St,0,1,N/A
+1768182,"August 18, 2020",Pennsylvania,Philadelphia,100 block of N Peach St,0,1,N/A
+1768125,"August 18, 2020",Pennsylvania,Philadelphia,30th St and Cumberland St,1,4,N/A
+1767926,"August 18, 2020",Virginia,Richmond,3400 block of Maury St,0,2,N/A
+1767851,"August 18, 2020",New York,Corona (Queens),35-35 21st St,0,4,N/A
+1768120,"August 18, 2020",Illinois,Chicago,3948 W Gladys Ave,0,2,N/A
+1769915,"August 18, 2020",Florida,Miami,SW 13th Ave,0,1,N/A
+1769590,"August 18, 2020",California,Highland,26000 block of Baseline St,0,1,N/A
+1767490,"August 18, 2020",District of Columbia,Washington,400 block of 13th St NE,0,1,N/A
+1769420,"August 18, 2020",Ohio,Toledo,3100 block of N Detroit Ave,0,1,N/A
+1767282,"August 17, 2020",Illinois,Chicago,518 E 42nd Pl,0,2,N/A
+1767080,"August 17, 2020",Illinois,Decatur,N Martin Luther King Jr Dr and E Garfield Ave,0,2,N/A
+1767882,"August 17, 2020",Illinois,Chicago,1500 block of S Kedvale Ave,0,1,N/A
+1767840,"August 17, 2020",Kentucky,Louisville,E Muhammad Ali Blvd and S Wenzel St,0,2,N/A
+1767536,"August 17, 2020",Louisiana,Shreveport,2600 block of Silver Pines Blvd,0,1,N/A
+1766498,"August 17, 2020",Illinois,Chicago,7300 block of S South Shore Dr,0,1,N/A
+1766303,"August 16, 2020",Virginia,Richmond,2100 block of Newbourne St,0,2,N/A
+1766011,"August 16, 2020",Illinois,Chicago,2000 block of W Chase Ave,0,1,N/A
+1766980,"August 16, 2020",New York,Syracuse,213 Warner Ave,0,1,N/A
+1765845,"August 16, 2020",California,Corona (Eastvale),7200 block of Lazare Court,1,1,N/A
+1765733,"August 16, 2020",Nebraska,Omaha,13th St and Martha St,0,1,N/A
+1766675,"August 16, 2020",Maryland,Baltimore,2500 block of Washington Blvd,0,1,N/A
+1766633,"August 16, 2020",Indiana,Indianapolis,2900 block of N Arsenal Ave,0,1,N/A
+1768666,"August 16, 2020",Ohio,Akron,700 block of Carpenter St,0,1,N/A
+1766500,"August 16, 2020",North Carolina,Raleigh,416 Dorothea Dr,0,1,N/A
+1768548,"August 16, 2020",Ohio,Akron,Kenmore Blvd and 22nd St SW,0,1,N/A
+1765699,"August 16, 2020",Texas,San Antonio,207 W Chavaneaux Rd,1,3,N/A
+1766778,"August 16, 2020",Louisiana,Shreveport,1-20,1,2,N/A
+1766304,"August 16, 2020",Pennsylvania,Philadelphia,2000 block of Chelten Ave,0,3,N/A
+1765286,"August 15, 2020",Michigan,Lansing,Grier St and High St,0,1,N/A
+1765159,"August 15, 2020",Kentucky,Elizabethtown,Nicholas St and Skyline Dr,0,1,N/A
+1765499,"August 15, 2020",Pennsylvania,Philadelphia,N 10th St and Brown St,0,5,N/A
+1765448,"August 15, 2020",Louisiana,New Orleans,4300 block of Thalia St,0,3,N/A
+1767949,"August 15, 2020",Texas,Houston,10001 Westpark Dr,1,1,N/A
+1765040,"August 15, 2020",Pennsylvania,Philadelphia,500 block of W York St,0,1,N/A
+1765916,"August 15, 2020",New York,Bronx,1564 Southern Blvd,0,1,N/A
+1764933,"August 15, 2020",District of Columbia,Washington,500 block of Newcomb St SE,0,1,N/A
+1765524,"August 15, 2020",Florida,Miami,21500 block of SW 114th Ct,2,1,N/A
+1764836,"August 15, 2020",Wisconsin,Milwaukee,W Capitol Dr and N 26th St,0,2,N/A
+1764709,"August 15, 2020",Illinois,Chicago,3600 block of W 70th St,0,1,N/A
+1765538,"August 15, 2020",Illinois,Chicago,517 E 47th St,0,1,N/A
+1765540,"August 15, 2020",Illinois,Chicago,3500 block of W Flournoy St,1,1,N/A
+1765458,"August 15, 2020",Louisiana,New Orleans,Curran Blvd and Buffalo Rd,0,1,N/A
+1765415,"August 15, 2020",Minnesota,Minneapolis,3000 block of Dupont Ave N,0,1,N/A
+1764443,"August 14, 2020",Kentucky,Hopkinsville,E 1st St and Rozelle Ct,1,1,N/A
+1764564,"August 14, 2020",Ohio,Akron,700 block of Roselle Ave,1,1,N/A
+1766062,"August 14, 2020",California,San Diego,36th St,0,1,N/A
+1765104,"August 14, 2020",California,San Francisco,36th St and El Cajon Blvd,0,1,N/A
+1793836,"August 14, 2020",Pennsylvania,Logan,N/A,0,1,N/A
+1764572,"August 14, 2020",Alabama,Huntsville,Spann St,0,1,N/A
+1764655,"August 14, 2020",Illinois,Chicago,4400 block of S Hermitage Ave,0,1,N/A
+1764459,"August 14, 2020",Illinois,Chicago,6417 S Ellis Ave,0,1,N/A
+1763765,"August 13, 2020",Illinois,Centerville,N 74th St and Enda St,0,1,N/A
+1763694,"August 13, 2020",Texas,Pharr,25 N Fir St,0,1,N/A
+1764180,"August 13, 2020",Minnesota,Minneapolis,52nd Ave and Fremont Ave,0,1,N/A
+1766132,"August 13, 2020",New York,Rochester,Santee St,0,1,N/A
+1764490,"August 13, 2020",Arkansas,Marianna,Main St and Alabama St,1,1,N/A
+1764199,"August 13, 2020",Ohio,Toledo,3400 block of Worley Pl,0,1,N/A
+1764267,"August 13, 2020",Ohio,Columbus,I-270 and Hall Rd,1,1,N/A
+1764029,"August 13, 2020",Indiana,Fishers,11825 Technology Dr,1,1,N/A
+1763978,"August 13, 2020",Illinois,Chicago,2700 block of E 89th St,0,1,N/A
+1763967,"August 13, 2020",Illinois,Chicago,6700 block of S Sangamon St,0,2,N/A
+1763949,"August 13, 2020",Illinois,Chicago,1800 block of S Albany Ave,0,2,N/A
+1763924,"August 13, 2020",Ohio,Cincinnati (Forest Park),Waycross Rd and Geneva Rd,0,2,N/A
+1764566,"August 13, 2020",California,Vallejo,2000 block of Sonoma Ave,0,1,N/A
+1764562,"August 13, 2020",Ohio,Akron,Cole Ave and Neptune Ave,0,1,N/A
+1763044,"August 12, 2020",New York,Brooklyn,651 E 82nd St,0,2,N/A
+1762479,"August 12, 2020",Texas,Houston,12925 Northwest Fwy,0,1,N/A
+1762585,"August 12, 2020",Ohio,Columbus,Scottwood Rd and Aven Dr,0,1,N/A
+1762388,"August 12, 2020",Illinois,Chicago,1445 W Roosevelt Rd,0,1,N/A
+1762511,"August 12, 2020",Maryland,Baltimore,4500 block of Saint Georges Ave,0,2,N/A
+1762378,"August 12, 2020",Florida,Vero Beach,2100 Block of 16th Ave SW,0,1,N/A
+1762146,"August 11, 2020",Virginia,Portsmouth,N/A,0,1,N/A
+1762800,"August 11, 2020",Tennessee,Springfield,Pine Cir,1,1,N/A
+1764412,"August 11, 2020",Illinois,Chicago,1000 block of N Monitor Ave,0,1,N/A
+1762198,"August 11, 2020",Louisiana,New Orleans,3300 block of Magnolia St,0,2,N/A
+1761739,"August 11, 2020",New York,Bronx,1330 Intervale Ave,0,1,N/A
+1762518,"August 11, 2020",Maryland,Baltimore,1800 block of Orleans St,0,1,N/A
+1761302,"August 11, 2020",District of Columbia,Washington,1300 block of Congress St SE,0,3,N/A
+1762578,"August 11, 2020",South Carolina,Anderson,3515 Clemson Blvd,1,1,N/A
+1762188,"August 11, 2020",District of Columbia,Washington,2300 block of Pennsylvania Ave SE,0,1,N/A
+1762326,"August 11, 2020",Illinois,Chicago,4100 block of W Crystal St,0,1,N/A
+1762864,"August 11, 2020",Texas,San Antonio,130 Camino De Oro,0,1,N/A
+1763139,"August 11, 2020",Pennsylvania,Erie,Elm St and Broad St,0,1,N/A
+1760507,"August 10, 2020",Michigan,Kalamazoo,Stockbridge Ave and Mills St,0,1,N/A
+1761745,"August 10, 2020",New York,Bronx,816 East 179th St,0,2,N/A
+1763365,"August 10, 2020",Indiana,Fort Wayne,1500 block of Sherman Blvd,0,1,N/A
+1760248,"August 10, 2020",District of Columbia,Washington,5000 block of D St SE,0,2,N/A
+1760952,"August 10, 2020",Louisiana,New Orleans,400 block of 10th St,0,1,N/A
+1759873,"August 9, 2020",Colorado,Denver,1400 block of W Byers Pl,0,9,N/A
+1759644,"August 9, 2020",Louisiana,Port Barre,200 block of Bayou Dr,1,1,N/A
+1759632,"August 9, 2020",Ohio,Columbus,N 4th St and Wyandotte Ave,0,1,N/A
+1759546,"August 9, 2020",Florida,Jacksonville,MLK Jr Pkwy,0,1,N/A
+1759530,"August 9, 2020",Florida,Jacksonville,6602 Richardson Rd,0,3,N/A
+1760505,"August 9, 2020",Michigan,Kalamazoo,Jackson St and Russell St,0,1,N/A
+1760376,"August 9, 2020",Utah,Salt Lake City,900 S and 3150 W,0,1,N/A
+1758966,"August 9, 2020",District of Columbia,Washington,3300 block of Dubois Pl SE,1,21,N/A
+1760336,"August 9, 2020",California,Long Beach,200 block of Bay St,0,1,N/A
+1759322,"August 9, 2020",Illinois,Chicago,100 block of W 66th St,0,1,N/A
+1770503,"August 9, 2020",California,Acton,CA-14,0,2,N/A
+1760624,"August 9, 2020",Ohio,Columbus,5870 Emporium Sq,0,1,N/A
+1760072,"August 8, 2020",Louisiana,Shreveport,Linwood Ave and 77th St,0,1,N/A
+1758206,"August 8, 2020",Illinois,Decatur,1200 block of W Lincoln Park Dr,0,1,N/A
+1758417,"August 8, 2020",New York,Buffalo (Cheektowaga),400 block of Koons Ave,0,1,N/A
+1759696,"August 8, 2020",Florida,Orlando,1294 S Orange Blossom Trail,0,1,N/A
+1758838,"August 8, 2020",Pennsylvania,Philadelphia,1101 N 38th St,0,6,N/A
+1758427,"August 8, 2020",Alabama,Opelika,100 block of Chester Ave,0,3,N/A
+1759320,"August 8, 2020",Illinois,Chicago,1300 block of S Christiana Ave,0,1,N/A
+1758174,"August 8, 2020",Illinois,Chicago,11500 block of S Yale Ave,0,1,N/A
+1759228,"August 8, 2020",Louisiana,Shreveport,2600 block of Waggoner Ave,0,1,N/A
+1761316,"August 8, 2020",Texas,Houston,5900 Selinsky Rd,0,2,N/A
+1760137,"August 8, 2020",Texas,Fort Worth,4200 block of Killian St,0,1,N/A
+1758380,"August 7, 2020",California,Oakland,6800 block of Hawley St,0,1,N/A
+1758254,"August 7, 2020",Ohio,Cincinnati,10200 block of Menominee Dr,0,1,N/A
+1758101,"August 7, 2020",Texas,San Antonio,6060 Montgomery Dr,0,2,N/A
+1756887,"August 6, 2020",Illinois,Chicago,2701 S Dearborn St,0,1,N/A
+1757244,"August 6, 2020",New York,New York (Manhattan),W 132nd St and Adam Clayton Powell Jr Blvd,0,1,N/A
+1757262,"August 6, 2020",Illinois,Chicago,5800 block of S Michigan Ave,0,1,N/A
+1757257,"August 6, 2020",Illinois,Chicago,2700 block of S State St,0,1,N/A
+1756417,"August 5, 2020",Michigan,Detroit,12000 block of Monica St,0,1,N/A
+1756783,"August 5, 2020",Virginia,Richmond,1900 block of Accommodation St,0,1,N/A
+1756668,"August 5, 2020",Missouri,Mexico,900 block of Tyronn Lue Blvd,1,1,N/A
+1756134,"August 5, 2020",Missouri,Saint Louis (Ferguson),S Florissant Rd and Carson Rd,0,1,N/A
+1756458,"August 5, 2020",Illinois,Chicago,100 block of E 102nd St,0,1,N/A
+1756412,"August 5, 2020",Kansas,Tonganoxie,19611 McLouth Rd,0,2,N/A
+1760993,"August 4, 2020",Louisiana,Lafayette,1100 block of E Alexander St,0,1,N/A
+1756011,"August 4, 2020",Illinois,East Saint Louis (Alorton),103 Greystone Dr,0,1,N/A
+1754977,"August 4, 2020",Illinois,Decatur,S Jasper St and E Cantrell St,0,1,N/A
+1755250,"August 4, 2020",Illinois,Chicago,8315 S Peoria St,0,1,N/A
+1755297,"August 4, 2020",District of Columbia,Washington,5400 block of Georgia Ave NW,0,4,N/A
+1754640,"August 4, 2020",Missouri,Saint Louis,5300 block of Bircher Blvd,1,3,N/A
+1755558,"August 4, 2020",Ohio,Columbus,1887 Jermain Dr,0,1,N/A
+1755293,"August 4, 2020",District of Columbia,Washington,1600 block of Maryland Ave NE,2,1,N/A
+1755560,"August 4, 2020",Ohio,Columbus,2351 McGuffey Rd,0,1,N/A
+1755506,"August 4, 2020",Arkansas,Little Rock,5400 Stanley Dr,0,1,N/A
+1755918,"August 4, 2020",Michigan,Grand Rapids,Olympia St SW and Grandville Ave SW,0,1,N/A
+1754623,"August 3, 2020",Texas,Fort Worth,6900 block of Sandybrook Dr,0,1,N/A
+1755199,"August 3, 2020",Michigan,Kalamazoo,1500 block of Cobb Ave,0,1,N/A
+1754312,"August 3, 2020",Michigan,Muskegon (Muskegon Heights),2818 Woodcliffe Dr,1,1,N/A
+1754261,"August 3, 2020",New York,Brooklyn,E 21st St and Ditmas Ave,0,2,N/A
+1753938,"August 3, 2020",Ohio,Akron,444 E Exchange St,0,3,N/A
+1754963,"August 3, 2020",Ohio,Columbus,2418 Taylor Ave,0,1,N/A
+1754769,"August 3, 2020",California,San Francisco,Sunnydale Ave and Hahn St,0,1,N/A
+1755475,"August 3, 2020",Tennessee,Memphis,I-40 and TN-300,0,1,N/A
+1755338,"August 3, 2020",Virginia,Virginia Beach,3900 block of Holland Rd,0,1,N/A
+1754274,"August 2, 2020",New York,Albany,Cortland Place and State St,0,2,N/A
+1754241,"August 2, 2020",New York,New York (Manhattan),410 E 105th St,0,1,N/A
+1754114,"August 2, 2020",Virginia,Fort Lee,1510 Sisisky Blvd,0,1,N/A
+1754252,"August 2, 2020",New York,Brooklyn,Bristol St and Dumont Ave,0,3,N/A
+1753318,"August 2, 2020",Florida,Orlando (Pine Hills),5600 block of Pine Chase Dr,0,1,N/A
