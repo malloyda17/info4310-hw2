@@ -33,15 +33,11 @@
         stroke-linejoin: round;
         stroke-linecap: round;
         pointer-events: none;
+        fill: none;
     }
 
     .county-boundary {
         stroke-width: .5px;
-    }
-
-    .county-boundary:hover,
-    .state:hover {
-        fill: rgba(116, 115, 115, 0.667);
     }
 </style>
 
@@ -54,6 +50,8 @@
             const svg = d3.select("#viz");
             const width = svg.attr("width");
             const height = svg.attr("height");
+            var active = d3.select(null);
+
             const margin = {
                 top: 20,
                 right: 20,
@@ -113,6 +111,59 @@
                 const colorScale = d3.scaleSequential(d3.schemeRdBu[5]).domain(leadExtent);
 
 
+                function hover(d) {
+                    d3.select(this).attr('stroke-width', '5px');
+                }
+
+                function n_hover(d) {
+                    d3.select(this).attr('stroke-width', '1.5px');
+                }
+
+                function clicked(d) {
+                    if (d3.select('.background').node() === this) return reset();
+
+                    if (active.node() === this) return reset();
+
+                    active.classed("active", false);
+                    active = d3.select(this).classed("active", true);
+
+                    var bounds = path.bounds(d),
+                        dx = bounds[1][0] - bounds[0][0],
+                        dy = bounds[1][1] - bounds[0][1],
+                        x = (bounds[0][0] + bounds[1][0]) / 2,
+                        y = (bounds[0][1] + bounds[1][1]) / 2,
+                        scale = .9 / Math.max(dx / width, dy / height),
+                        translate = [width / 2 - scale * x, height / 2 - scale * y];
+
+                    g.transition()
+                        .duration(750)
+                        .style("stroke-width", 1.5 / scale + "px")
+                        .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
+                }
+
+                function reset() {
+                    active.classed("active", false);
+                    active = d3.select(null);
+
+
+                    g.transition()
+                        .delay(100)
+                        .duration(750)
+                        .style("stroke-width", "1.5px")
+                        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+                };
+
+                g.append("g")
+                    .attr("id", "counties")
+                    .selectAll("path")
+                    .data(topojson.feature(us, us.objects.counties).features)
+                    .enter().append("path")
+                    .attr("d", path)
+                    .attr("fill", "#EBEBEB")
+                    .attr("stroke", "black")
+                    .attr("class", "county-boundary")
+                    .on("click", reset);
 
                 g.append("g")
                     .attr("id", "states")
@@ -123,8 +174,11 @@
                     .attr("fill", '#EBEBEB')
                     .attr("stroke", "black")
                     .attr("class", "state")
-                    .attr("note", d => d.id);
-                // .on("click", clicked);
+                    .attr("note", d => d.id)
+                    // .on("click", clicked);
+                    .on("mouseover", hover)
+                    .on("mouseout", n_hover)
+                    .on("click", clicked);
 
 
                 g.append("path")
@@ -132,22 +186,12 @@
                         return i !== j;
                     }))
                     .attr("id", "state-borders")
-                    .attr("class", 'outline')
-                    .attr("d", path)
-                    .attr("fill", "#EBEBEB")
-                    .attr('stroke', 'black');
+                    .attr("d", path);
+
+            }
 
 
-
-
-
-
-
-
-
-            };
             getData();
-
         </script>
     </p>
 </body>
