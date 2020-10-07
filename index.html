@@ -88,27 +88,31 @@
                 //     .attr("class", "county-boundary")
                 //     .on("click", reset);
 
-                var stateData = await d3.csv('electionResults_byState_2016.csv');
+                var stateData = await d3.csv('election_byState.csv');
                 console.log(stateData);
 
-                idToStateCode = {}
-                idToStateName = {}
+                idToPercent = {}
 
 
                 stateData.forEach(d => {
-                    d['stateCode'] = d['state_abbr'];
+                    //d['stateCode'] = d['state_abbr'];
                     d['D_percent_lead'] = Number(d['%diff_dem_favor']).toFixed(2);
                     d['percent_D'] = Number(d['%dem']);
                     d['percent_R'] = Number(d['%rep']);
+                    d['id'] = Number(d['state_id']);
+                    idToPercent[d.id] = d.D_percent_lead;
 
                 });
 
-                console.log(stateData);
+                //console.log(stateData);
 
                 const leadExtent = d3.extent(stateData, d => Number(d['D_percent_lead']));
                 console.log(leadExtent)
 
-                const colorScale = d3.scaleSequential(d3.schemeRdBu[5]).domain(leadExtent);
+                // const colorScale = d3.scaleQuantize().domain(leadExtent)
+                //     .range(['#D93333', '#DE8181', '#DCD2D2', '#7A8FDD', '#3357DC']);
+
+                const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(leadExtent);
 
 
                 function hover(d) {
@@ -171,7 +175,8 @@
                     .data(topojson.feature(us, us.objects.states).features)
                     .enter().append("path")
                     .attr("d", path)
-                    .attr("fill", '#EBEBEB')
+                    .attr('fill', d => colorScale(idToPercent[d.id]))
+                    // .attr("fill", '#EBEBEB')
                     .attr("stroke", "black")
                     .attr("class", "state")
                     .attr("note", d => d.id)
