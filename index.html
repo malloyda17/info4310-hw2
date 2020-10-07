@@ -14,11 +14,39 @@
     p {
         font-size: 22px;
     }
+    
+    .background {
+        fill: none;
+        pointer-events: all;
+    }
+    /* #states {
+        fill: #aaa;
+    } */
+    
+    #states .active {
+        display: none;
+    }
+    
+    #state-borders {
+        stroke-width: 1.5px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        pointer-events: none;
+    }
+    
+    .county-boundary {
+        stroke-width: .5px;
+    }
+    
+    .county-boundary:hover,
+    .state:hover {
+        fill: rgba(116, 115, 115, 0.667);
+    }
 </style>
 
 <body>
     <h3>Destiny Malloy (dam359), Marcella Imoisili (mii7)</h3>
-    <p id="p1"><strong>Visualization of the effects of Gun Violence in the U.S. </strong></br>
+    <p id="p1"><strong>Visualization of Historical U.S. Poll Data </strong></br>
         <svg id="viz" height="900" width="1500"></svg>
         <script>
             //python3 -m http.server
@@ -56,6 +84,8 @@
                 //     .data(topojson.feature(us, us.objects.counties).features)
                 //     .enter().append("path")
                 //     .attr("d", path)
+                //     .attr("fill", "#EBEBEB")
+                //     .attr("stroke", "black")
                 //     .attr("class", "county-boundary")
                 //     .on("click", reset);
 
@@ -72,8 +102,8 @@
 
 
                 g.append("path")
-                    .datum(topojson.mesh(us, us.objects.states, function(a, b) {
-                        return a !== b;
+                    .datum(topojson.mesh(us, us.objects.states, function(i, j) {
+                        return i !== j;
                     }))
                     .attr("id", "state-borders")
                     .attr("d", path);
