@@ -14,20 +14,19 @@
     p {
         font-size: 22px;
     }
-
+    
     .background {
         fill: none;
         pointer-events: all;
     }
-
     /* #states {
         fill: #aaa;
     } */
-
+    
     #states .active {
         display: none;
     }
-
+    
     #state-borders {
         stroke-width: 1.5px;
         stroke-linejoin: round;
@@ -35,7 +34,7 @@
         pointer-events: none;
         fill: none;
     }
-
+    
     .county-boundary {
         stroke-width: .5px;
     }
@@ -50,7 +49,9 @@
             const svg = d3.select("#viz");
             const width = svg.attr("width");
             const height = svg.attr("height");
-            var active = d3.select(null);
+            // var active = d3.select(null);
+            var active = null;
+
 
             const margin = {
                 top: 20,
@@ -59,7 +60,7 @@
                 left: 20
             };
 
-            const getData = async function () {
+            const getData = async function() {
 
                 const us = await d3.json('us.json');
 
@@ -75,18 +76,6 @@
                     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
                     .attr('width', width + margin.left + margin.right)
                     .attr('height', height + margin.top + margin.bottom)
-
-
-                // g.append("g")
-                //     .attr("id", "counties")
-                //     .selectAll("path")
-                //     .data(topojson.feature(us, us.objects.counties).features)
-                //     .enter().append("path")
-                //     .attr("d", path)
-                //     .attr("fill", "#EBEBEB")
-                //     .attr("stroke", "black")
-                //     .attr("class", "county-boundary")
-                //     .on("click", reset);
 
                 var stateData = await d3.csv('election_byState.csv');
                 console.log(stateData);
@@ -123,36 +112,44 @@
                     d3.select(this).attr('stroke-width', '1.5px');
                 }
 
+
                 function clicked(d) {
-                    if (d3.select('.background').node() === this) return reset();
+                    var dx;
+                    var dy;
+                    var k;
 
-                    if (active.node() === this) return reset();
+                    if (d && active !== d) {
+                        var centroid = path.centroid(d);
+                        dx = centroid[0];
+                        dy = centroid[1];
+                        k = 4;
+                        active = d;
+                    } else {
+                        dx = width / 2;
+                        dy = height / 2;
+                        k = 1;
+                        active = null;
+                    }
 
-                    active.classed("active", false);
-                    active = d3.select(this).classed("active", true);
-
-                    var bounds = path.bounds(d),
-                        dx = bounds[1][0] - bounds[0][0],
-                        dy = bounds[1][1] - bounds[0][1],
-                        x = (bounds[0][0] + bounds[1][0]) / 2,
-                        y = (bounds[0][1] + bounds[1][1]) / 2,
-                        scale = .9 / Math.max(dx / width, dy / height),
-                        translate = [width / 2 - scale * x, height / 2 - scale * y];
+                    g.selectAll("path")
+                        .classed("active", active && function(d) {
+                            return d === active;
+                        });
 
                     g.transition()
-                        .duration(750)
-                        .style("stroke-width", 1.5 / scale + "px")
-                        .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
+                        .duration(300)
+                        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -dx + "," + -dy + ")")
+                        .style("stroke-width", 1.5 / k + "px");
                 }
 
                 function reset() {
-                    active.classed("active", false);
-                    active = d3.select(null);
+                    g.selectAll("path")
+                        .classed("active", false);
+                    active = null;
 
 
                     g.transition()
-                        .delay(100)
-                        .duration(750)
+                        .duration(500)
                         .style("stroke-width", "1.5px")
                         .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
@@ -187,7 +184,7 @@
 
 
                 g.append("path")
-                    .datum(topojson.mesh(us, us.objects.states, function (i, j) {
+                    .datum(topojson.mesh(us, us.objects.states, function(i, j) {
                         return i !== j;
                     }))
                     .attr("id", "state-borders")
