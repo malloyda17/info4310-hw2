@@ -61,23 +61,23 @@
                 left: 20
             };
 
-            Promise.resolve(d3.json('us.json'))
-                .then(ready);
+            const getData = async function () {
 
-            var projection = d3.geoAlbersUsa()
-                .translate([width / 2, height / 2])
-                .scale(width);
+                const us = await d3.json('us.json');
 
-            var path = d3.geoPath()
-                .projection(projection);
+                var projection = d3.geoAlbersUsa()
+                    .translate([width / 2, height / 2])
+                    .scale(width);
 
-            var g = svg.append("g")
-                .attr('class', 'center-container center-items us-state')
-                .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
-                .attr('width', width + margin.left + margin.right)
-                .attr('height', height + margin.top + margin.bottom)
+                var path = d3.geoPath()
+                    .projection(projection);
 
-            function ready(us) {
+                var g = svg.append("g")
+                    .attr('class', 'center-container center-items us-state')
+                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+                    .attr('width', width + margin.left + margin.right)
+                    .attr('height', height + margin.top + margin.bottom)
+
 
                 // g.append("g")
                 //     .attr("id", "counties")
@@ -90,6 +90,28 @@
                 //     .attr("class", "county-boundary")
                 //     .on("click", reset);
 
+                var stateData = await d3.csv('electionResults_byState_2016.csv');
+                console.log(stateData);
+
+                idToStateCode = {}
+                idToStateName = {}
+
+
+                stateData.forEach(d => {
+                    d['stateCode'] = d['state_abbr'];
+                    d['D_percent_lead'] = Number(d['%diff_dem_favor']).toFixed(2);
+                    d['percent_D'] = Number(d['%dem']);
+                    d['percent_R'] = Number(d['%rep']);
+
+                });
+
+                console.log(stateData);
+
+                const leadExtent = d3.extent(stateData, d => Number(d['D_percent_lead']));
+                console.log(leadExtent)
+
+                const colorScale = d3.scaleSequential(d3.schemeRdBu[5]).domain(leadExtent);
+
 
 
                 g.append("g")
@@ -98,9 +120,10 @@
                     .data(topojson.feature(us, us.objects.states).features)
                     .enter().append("path")
                     .attr("d", path)
-                    .attr("fill", "#EBEBEB")
+                    .attr("fill", '#EBEBEB')
                     .attr("stroke", "black")
-                    .attr("class", "state");
+                    .attr("class", "state")
+                    .attr("note", d => d.id);
                 // .on("click", clicked);
 
 
@@ -118,29 +141,12 @@
 
 
 
-            }
-
-            // var stateData = d3.csv('electionResults_byState_2016.csv');
-            // console.log(stateData);
-
-            // stateData.forEach(d => {
-            //     d['stateCode'] = d['state_abbr'];
-            //     d['D_percent_lead'] = Number(d['%diff_dem_favor']);
-            //     d['percent_D'] = Number(d['%dem']);
-            //     d['percent_R'] = Number(d['%rep']);
-
-            // });
-
-            // console.log(stateData); 
-
-            // const leadExtent = d3.extent(stateData, d => d['%diff_dem_favor']);
-            // console.log(leadExtent)
-
-            // const colorScale = d3.scale
 
 
 
 
+            };
+            getData();
 
         </script>
     </p>
