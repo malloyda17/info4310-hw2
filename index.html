@@ -14,20 +14,20 @@
     p {
         font-size: 22px;
     }
-
+    
     .background {
         fill: none;
         pointer-events: all;
     }
-
-    /* #states {
-        fill: #aaa;
-    } */
-
+    
+    .county-boundary {
+        stroke-width: .5px;
+    }
+    
     #states .active {
         display: none;
     }
-
+    
     #state-borders {
         stroke-width: 1.5px;
         stroke-linejoin: round;
@@ -35,9 +35,15 @@
         pointer-events: none;
         fill: none;
     }
-
-    .county-boundary {
-        stroke-width: .5px;
+    
+    .textinfo {
+        position: absolute;
+        display: none;
+        background: none repeat scroll 0 0 white;
+        box-shadow: -3px 3px 15px #888888;
+        font: 12px;
+        color: black;
+        padding: 10px;
     }
 </style>
 
@@ -50,7 +56,6 @@
             const svg = d3.select('#viz');
             const width = svg.attr('width');
             const height = svg.attr('height');
-            // var active = d3.select(null);
             var active = null;
 
 
@@ -61,7 +66,7 @@
                 left: 20
             };
 
-            const getData = async function () {
+            const getData = async function() {
 
                 const us = await d3.json('us.json');
 
@@ -117,14 +122,21 @@
                 //     .range(['#D93333', '#DE8181', '#DCD2D2', '#7A8FDD', '#3357DC']);
 
                 const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(countyLeadExtent);
+                const textinfo = d3.select("body").append("div").attr("class", "textinfo");
+
 
 
                 function hover(d) {
                     d3.select(this).attr('stroke-width', '5px');
+                    textinfo.html("" + d["%diff_dem_favor"]);
+                    textinfo.style("left", d3.event.pageX + 7 + "px");
+                    textinfo.style("top", d3.event.pageY + 7 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
+                    textinfo.style("display", "inline-block");
                 }
 
                 function n_hover(d) {
                     d3.select(this).attr('stroke-width', '1.5px');
+                    textinfo.style("display", "none");
                 }
 
 
@@ -147,7 +159,7 @@
                     }
 
                     g.selectAll('path')
-                        .classed('active', active && function (d) {
+                        .classed('active', active && function(d) {
                             return d === active;
                         });
 
@@ -203,7 +215,7 @@
 
 
                 g.append("path")
-                    .datum(topojson.mesh(us, us.objects.states, function (i, j) {
+                    .datum(topojson.mesh(us, us.objects.states, function(i, j) {
                         return i !== j;
                     }))
                     .attr('id', 'state-borders')
