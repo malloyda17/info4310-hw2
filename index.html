@@ -139,9 +139,8 @@
                 R_candidate_votesS = {}
                 D_candidate_votesC = {}
                 R_candidate_votesC = {}
-                TotalPop = {}
-
-
+                TotalPopC = {}
+                TotalPopS = {}
 
                 stateData.forEach(d => {
                     d['D_percent_lead'] = Number(d['%diff_dem_favor']).toFixed(2);
@@ -156,6 +155,7 @@
                     totalvotesS[d.id] = d['totalvotes'];
                     D_candidate_votesS[d.id] = d['D_candidate_votes'];
                     R_candidate_votesS[d.id] = d['R_candidate_votes'];
+                    TotalPopS[d.id] = d['state_population'];
                 });
 
                 var countyData = await d3.csv('electionResults_byCounty.csv');
@@ -175,7 +175,7 @@
 
 
                 censusData.forEach(d => {
-                    TotalPop[d.FIPS] = d['TotalPop'];
+                    TotalPopC[d.FIPS] = d['TotalPop'];
                 });
 
                 const leadExtent = d3.extent(stateData, d => Number(d['D_percent_lead']));
@@ -267,7 +267,8 @@
                         "Winner Lead by: <strong>" + Math.abs(idToStatePercentLead[d.id]) + "</strong>% <br> Total Votes: <strong>" +
                         formatComma(Math.abs(totalvotesS[d.id])) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
                         formatComma(D_candidate_votesS[d.id]) + "</strong> votes <br> Republican Candidate votes: <strong>" +
-                        formatComma(R_candidate_votesS[d.id]) + "</strong> votes </p>");
+                        formatComma(R_candidate_votesS[d.id]) + "</strong> votes <br> Total Population: <strong>" +
+                        formatComma(TotalPopS[d.id]) + "</strong> </p>");
                 }
 
 
@@ -282,7 +283,7 @@
                         formatComma(Math.abs(totalvotesC[d.id])) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
                         formatComma(D_candidate_votesC[d.id]) + "</strong> votes <br> Republican Candidate votes: <strong>" +
                         formatComma(R_candidate_votesC[d.id]) + "</strong> votes  <br> Total Population: <strong>" +
-                        formatComma(TotalPop[d.id]) + "</strong> </p>");
+                        formatComma(TotalPopC[d.id]) + "</strong> </p>");
                 }
 
                 function n_hover(d) {
