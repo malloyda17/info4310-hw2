@@ -44,6 +44,9 @@
         font: 12px;
         color: black;
         padding: 10px;
+        width: 30%;
+        height: 30%;
+        text-align: center;
     }
 </style>
 
@@ -129,8 +132,8 @@
                 function hover(d) {
                     d3.select(this).attr('stroke-width', '5px');
                     textinfo.html("" + d["%diff_dem_favor"]);
-                    textinfo.style("left", d3.event.pageX + 7 + "px");
-                    textinfo.style("top", d3.event.pageY + 7 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
+                    textinfo.style("left", width - 125 + "px");
+                    textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                 }
 
