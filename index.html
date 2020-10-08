@@ -108,8 +108,8 @@
                     idToStatePercentLead[d.id] = d.D_percent_lead;
                     d['state'] = d['state_name'];
                     idToStateName[d.id] = d['state'];
-                    idToStateDem[d.id] = Number(d['%dem']);
-                    idToStateRep[d.id] = Number(d['%rep']);
+                    idToStateDem[d.id] = Number(d['%dem']).toFixed(2);
+                    idToStateRep[d.id] = Number(d['%rep']).toFixed(2);
                 });
 
                 //console.log(stateData);
@@ -139,11 +139,11 @@
                 function colorScale(x) {
                     if (x <= -25) {
                         return '#de533e';
-                    } else if (x < -5) {
+                    } else if (x < -1) {
                         return '#ea9e8d';
-                    } else if (x < 5) {
+                    } else if (x > -1 && x < 1) {
                         return '#e2e2e2';
-                    } else if (x < 25) {
+                    } else if (x > 1 && x < 25) {
                         return '#9898de';
                     } else if (x >= 25) {
                         return '#1c54d6';
@@ -213,7 +213,9 @@
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                     console.log(d)
-                    textinfo.html(idToStateName[d.id] + " <br>" + "Winner Lead by: " + idToStatePercentLead[d.id] + " " + d['percent_D']);
+                    textinfo.html(idToStateName[d.id] + " <br>" +
+                        idToStateRep[d.id] + "%" + ' Republican<br>' +
+                        idToStateDem[d.id] + '%' + ' Democrat<br>');
 
                     // stateData.forEach(d => {
                     //     textinfo.html(stateList[d.state_abbr] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
@@ -321,6 +323,46 @@
                     .attr('id', 'state-borders')
                     .attr('d', path);
 
+
+
+                const legend = g.append("g").attr('id', 'legend')
+                    .attr('transform', 'translate(' + (290) + ',' + (160) + ')');
+
+                categories = ['+25-100%', '+1-25%', '', '+1-25%', '+25-100%']
+
+                categories.forEach((d, i) => {
+                    colors = ['#de533e', '#ea9e8d', '#e2e2e2', '#9898de', '#1c54d6', '#de533e']
+                    // bar_widths = [75, 25, 1, 25, 75]
+                    //making bars
+                    legend.append('rect')
+                        .attr('x', (100 * i) + 200)
+                        .attr('y', 10)
+                        .attr('height', 20)
+                        .attr('width', 100)
+                        .style('fill', colors[i])
+                    legend.append('text')
+                        .text(d)
+                        .attr('class', 'legend_label')
+                        .attr('transform', 'translate(' + ((100 * i) + 225) + ',' + (0) + ')')
+                        .style('font-size', '12')
+                    legend.append('text')
+                        .text('< 1% difference')
+                        .attr('class', 'legend_label')
+                        .attr('transform', 'translate(' + (410) + ',' + (0) + ')')
+                        .style('font-size', '12')
+                    legend.append('text')
+                        .text('Republican')
+                        .attr('transform', 'translate(' + (90) + ',' + (25) + ')')
+                    legend.append('text')
+                        .text('Democrat')
+                        .attr('transform', 'translate(' + (710) + ',' + (25) + ')')                    // legend.append('circle')
+                    //     // .attr('cx', 0)
+                    //     .attr('cx', (30 * i))
+                    //     // .attr('cy', (20 * i) - 4)
+                    //     .attr('cy', 0)
+                    //     .attr('r', 5)
+                    //     .style('fill', colors[i])
+                });
             };
             getData();
         </script>
