@@ -102,6 +102,9 @@
                     .attr('width', width + margin.left + margin.right)
                     .attr('height', height + margin.top + margin.bottom)
 
+                var censusData = await d3.csv('2015census.csv');
+                var formatComma = d3.format(",");
+
                 var stateData = await d3.csv('election_byState.csv');
                 console.log(stateData);
 
@@ -117,6 +120,7 @@
                 R_candidate_votesS = {}
                 D_candidate_votesC = {}
                 R_candidate_votesC = {}
+                TotalPop = {}
 
 
 
@@ -151,9 +155,12 @@
                     totalvotesC[d.FIPS] = d['totalvotes'];
                     D_candidate_votesC[d.FIPS] = d['D_candidate_votes'];
                     R_candidate_votesC[d.FIPS] = d['R_candidate_votes'];
-
                 });
 
+
+                censusData.forEach(d => {
+                    TotalPop[d.FIPS] = d['TotalPop'];
+                });
 
                 const leadExtent = d3.extent(stateData, d => Number(d['D_percent_lead']));
                 const countyLeadExtent = d3.extent(countyData, d => Number(d['D_percent_lead']));
@@ -245,9 +252,9 @@
                     textinfo.html("State: " + idToStateName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToStatePercentLead[d.id]) + " " + d['percent_D']);
                     textinfo.html("<p class='cs_h'> <u> State: <strong>" + idToStateName[d.id] + "</strong> </u> <br>" +
                         "Winner Lead by: <strong>" + Math.abs(idToStatePercentLead[d.id]) + "</strong> % <br> Total Votes: <strong>" +
-                        Math.abs(totalvotesS[d.id]) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
-                        D_candidate_votesS[d.id] + "</strong> votes <br> Republican Candidate votes: <strong>" +
-                        R_candidate_votesS[d.id] + "</strong> votes </p>");
+                        formatComma(Math.abs(totalvotesS[d.id])) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
+                        formatComma(D_candidate_votesS[d.id]) + "</strong> votes <br> Republican Candidate votes: <strong>" +
+                        formatComma(R_candidate_votesS[d.id]) + "</strong> votes </p>");
                 }
 
 
@@ -259,9 +266,10 @@
                     console.log(d)
                     textinfo.html("<p class='cs_h'> <u> County: <strong>" + idToCountyName[d.id] + "</strong> </u> <br>" +
                         "Winner Lead by: <strong>" + Math.abs(idToCountyPercentLead[d.id]) + "</strong> % <br> Total Votes: <strong>" +
-                        Math.abs(totalvotesC[d.id]) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
-                        D_candidate_votesC[d.id] + "</strong> votes <br> Republican Candidate votes: <strong>" +
-                        R_candidate_votesC[d.id] + "</strong> votes </p>");
+                        formatComma(Math.abs(totalvotesC[d.id])) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
+                        formatComma(D_candidate_votesC[d.id]) + "</strong> votes <br> Republican Candidate votes: <strong>" +
+                        formatComma(R_candidate_votesC[d.id]) + "</strong> votes  <br> Total Population: <strong>" +
+                        formatComma(TotalPop[d.id]) + "</strong> </p>");
                 }
 
                 function n_hover(d) {
