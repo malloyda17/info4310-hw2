@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
-    <script type="text/javascript" src="https://d3js.org/topojson.v3.min.js"></script>
+    <meta charset='UTF-8'>
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js'></script>
+    <script type='text/javascript' src='https://d3js.org/topojson.v3.min.js'></script>
     <title>info4310 HW2</title>
 </head>
 
@@ -43,14 +43,16 @@
 
 <body>
     <h3>Destiny Malloy (dam359), Marcella Imoisili (mii7)</h3>
-    <p id="p1"><strong> 2016 Poll Data </strong></br>
-        <svg id="viz" height="900" width="1500"></svg>
+    <p id='p1'><strong>2016 U.S. Poll Data </strong></br>
+        <svg id='viz' height='1100' width='1450'></svg>
         <script>
             //python3 -m http.server
-            const svg = d3.select("#viz");
-            const width = svg.attr("width");
-            const height = svg.attr("height");
-            var active = d3.select(null);
+            const svg = d3.select('#viz');
+            const width = svg.attr('width');
+            const height = svg.attr('height');
+            // var active = d3.select(null);
+            var active = null;
+
 
             const margin = {
                 top: 20,
@@ -70,23 +72,11 @@
                 var path = d3.geoPath()
                     .projection(projection);
 
-                var g = svg.append("g")
+                var g = svg.append('g')
                     .attr('class', 'center-container center-items us-state')
                     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
                     .attr('width', width + margin.left + margin.right)
                     .attr('height', height + margin.top + margin.bottom)
-
-
-                // g.append("g")
-                //     .attr("id", "counties")
-                //     .selectAll("path")
-                //     .data(topojson.feature(us, us.objects.counties).features)
-                //     .enter().append("path")
-                //     .attr("d", path)
-                //     .attr("fill", "#EBEBEB")
-                //     .attr("stroke", "black")
-                //     .attr("class", "county-boundary")
-                //     .on("click", reset);
 
                 var stateData = await d3.csv('election_byState.csv');
                 console.log(stateData);
@@ -137,44 +127,52 @@
                     d3.select(this).attr('stroke-width', '1.5px');
                 }
 
+
                 function clicked(d) {
-                    if (d3.select('.background').node() === this) return reset();
+                    var dx;
+                    var dy;
+                    var k;
 
-                    if (active.node() === this) return reset();
+                    if (d && active !== d) {
+                        var centroid = path.centroid(d);
+                        dx = centroid[0];
+                        dy = centroid[1];
+                        k = 4;
+                        active = d;
+                    } else {
+                        dx = width / 2;
+                        dy = height / 2;
+                        k = 1;
+                        active = null;
+                    }
 
-                    active.classed("active", false);
-                    active = d3.select(this).classed("active", true);
-
-                    var bounds = path.bounds(d),
-                        dx = bounds[1][0] - bounds[0][0],
-                        dy = bounds[1][1] - bounds[0][1],
-                        x = (bounds[0][0] + bounds[1][0]) / 2,
-                        y = (bounds[0][1] + bounds[1][1]) / 2,
-                        scale = .9 / Math.max(dx / width, dy / height),
-                        translate = [width / 2 - scale * x, height / 2 - scale * y];
+                    g.selectAll('path')
+                        .classed('active', active && function (d) {
+                            return d === active;
+                        });
 
                     g.transition()
-                        .duration(750)
-                        .style("stroke-width", 1.5 / scale + "px")
-                        .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
+                        .duration(300)
+                        .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')scale(' + k + ')translate(' + -dx + ',' + -dy + ')')
+                        .style('stroke-width', 1.5 / k + 'px');
                 }
 
                 function reset() {
-                    active.classed("active", false);
-                    active = d3.select(null);
+                    g.selectAll('path')
+                        .classed('active', false);
+                    active = null;
 
 
                     g.transition()
-                        .delay(100)
-                        .duration(750)
-                        .style("stroke-width", "1.5px")
+                        .duration(500)
+                        .style('stroke-width', '1.5px')
                         .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
                 };
 
-                g.append("g")
-                    .attr("id", "counties")
-                    .selectAll("path")
+                g.append('g')
+                    .attr('id', 'counties')
+                    .selectAll('path')
                     .data(topojson.feature(us, us.objects.counties).features)
                     .enter().append("path")
                     .attr("d", path)
@@ -208,12 +206,10 @@
                     .datum(topojson.mesh(us, us.objects.states, function (i, j) {
                         return i !== j;
                     }))
-                    .attr("id", "state-borders")
-                    .attr("d", path);
+                    .attr('id', 'state-borders')
+                    .attr('d', path);
 
-            }
-
-
+            };
             getData();
         </script>
     </p>
