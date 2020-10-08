@@ -121,9 +121,6 @@
                 console.log(leadExtent)
                 console.log(countyLeadExtent)
 
-                // const colorScale = d3.scaleQuantize().domain(leadExtent)
-                //     .range(['#D93333', '#DE8181', '#DCD2D2', '#7A8FDD', '#3357DC']);
-
 
                 //-25 and below
                 //below -5
@@ -141,18 +138,17 @@
                     } else if (x >= 25) {
                         return '#1c54d6';
                     } else {
-                        console.log(x)
                         return '#de533e';
                     }
                 }
-                // const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(countyLeadExtent);
                 const textinfo = d3.select("body").append("div").attr("class", "textinfo");
 
 
 
                 function hover(d) {
                     d3.select(this).attr('stroke-width', '5px');
-                    textinfo.html("" + d["%diff_dem_favor"]);
+                    // textinfo.html("" + d["%diff_dem_favor"]);
+                    textinfo.html('hello');
                     textinfo.style("left", width - 125 + "px");
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
