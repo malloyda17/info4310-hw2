@@ -20,9 +20,9 @@
         pointer-events: all;
     }
 
-    /* #states {
-        fill: #aaa;
-    } */
+    .county-boundary {
+        stroke-width: .5px;
+    }
 
     #states .active {
         display: none;
@@ -36,8 +36,17 @@
         fill: none;
     }
 
-    .county-boundary {
-        stroke-width: .5px;
+    .textinfo {
+        position: absolute;
+        display: none;
+        background: none repeat scroll 0 0 white;
+        box-shadow: -3px 3px 15px #888888;
+        font: 12px;
+        color: black;
+        padding: 10px;
+        width: 30%;
+        height: 30%;
+        text-align: center;
     }
 </style>
 
@@ -50,7 +59,6 @@
             const svg = d3.select('#viz');
             const width = svg.attr('width');
             const height = svg.attr('height');
-            // var active = d3.select(null);
             var active = null;
 
 
@@ -91,7 +99,7 @@
                     d['percent_R'] = Number(d['%rep']);
                     d['id'] = Number(d['state_id']);
                     idToStatePercentLead[d.id] = d.D_percent_lead;
-
+                    d['state'] = d['state_name'];
                 });
 
                 //console.log(stateData);
@@ -138,14 +146,22 @@
                     }
                 }
                 // const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(countyLeadExtent);
+                const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(countyLeadExtent);
+                const textinfo = d3.select("body").append("div").attr("class", "textinfo");
+
 
 
                 function hover(d) {
                     d3.select(this).attr('stroke-width', '5px');
+                    textinfo.html("" + d["%diff_dem_favor"]);
+                    textinfo.style("left", width - 125 + "px");
+                    textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
+                    textinfo.style("display", "inline-block");
                 }
 
                 function n_hover(d) {
                     d3.select(this).attr('stroke-width', '1.5px');
+                    textinfo.style("display", "none");
                 }
 
 
