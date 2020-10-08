@@ -95,6 +95,9 @@
 
                 idToStatePercentLead = {}
                 idToCountyPercentLead = {}
+                idToStateName = {}
+                idToStateRep = {}
+                idToStateDem = {}
 
                 stateData.forEach(d => {
                     //d['stateCode'] = d['state_abbr'];
@@ -104,6 +107,9 @@
                     d['id'] = Number(d['state_id']);
                     idToStatePercentLead[d.id] = d.D_percent_lead;
                     d['state'] = d['state_name'];
+                    idToStateName[d.id] = d['state'];
+                    idToStateDem[d.id] = Number(d['%dem']);
+                    idToStateRep[d.id] = Number(d['%rep']);
                 });
 
                 //console.log(stateData);
@@ -206,7 +212,8 @@
                     textinfo.style("left", width - 125 + "px");
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
-                    textinfo.html(stateList[d.state_abbr] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
+                    console.log(d)
+                    textinfo.html(idToStateName[d.id] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
 
                     // stateData.forEach(d => {
                     //     textinfo.html(stateList[d.state_abbr] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
@@ -302,7 +309,7 @@
                     .attr("stroke", "black")
                     .attr("class", "state")
                     .attr("note", d => d.id)
-                    .on("mouseover", d => hover(d))
+                    .on("mouseover", hover)
                     .on("mouseout", n_hover)
                     .on("click", clicked);
 
