@@ -24,6 +24,10 @@
         stroke-width: .5px;
     }
     
+    .county-boundary:hover {
+        stroke-width: 2.5px;
+    }
+    
     #states .active {
         display: none;
     }
@@ -113,7 +117,7 @@
                     d['percent_R'] = Number(d['percent_republican']);
                     d['FIPS'] = d.FIPS;
                     idToCountyPercentLead[d.FIPS] = d['D_percent_lead']
-                })
+                });
 
 
                 const leadExtent = d3.extent(stateData, d => Number(d['D_percent_lead']));
@@ -128,17 +132,88 @@
                 const textinfo = d3.select("body").append("div").attr("class", "textinfo");
 
 
+                const stateList = {
+                    'AL': 'Alabama',
+                    'AK': 'Alaska',
+                    'AZ': 'Arizona',
+                    'AR': 'Arkansas',
+                    'CA': 'California',
+                    'CO': 'Colorado',
+                    'CT': 'Connecticut',
+                    'DE': 'Delaware',
+                    'FL': 'Florida',
+                    'GA': 'Georgia',
+                    'HI': 'Hawaii',
+                    'ID': 'Idaho',
+                    'IL': 'Illinois',
+                    'IN': 'Indiana',
+                    'IA': 'Iowa',
+                    'KS': 'Kansas',
+                    'KY': 'Kentucky',
+                    'LA': 'Louisiana',
+                    'ME': 'Maine',
+                    'MD': 'Maryland',
+                    'MA': 'Massachusetts',
+                    'MI': 'Michigan',
+                    'MN': 'Minnesota',
+                    'MS': 'Mississippi',
+                    'MO': 'Missouri',
+                    'MT': 'Montana',
+                    'NE': 'Nebraska',
+                    'NV': 'Nevada',
+                    'NH': 'New Hampshire',
+                    'NJ': 'New Jersey',
+                    'NM': 'New Mexico',
+                    'NY': 'New York',
+                    'NC': 'North Carolina',
+                    'ND': 'North Dakota',
+                    'OH': 'Ohio',
+                    'OK': 'Oklahoma',
+                    'OR': 'Oregon',
+                    'PA': 'Pennsylvania',
+                    'RI': 'Rhode Island',
+                    'SC': 'South Carolina',
+                    'SD': 'South Dakota',
+                    'TN': 'Tennessee',
+                    'TX': 'Texas',
+                    'UT': 'Utah',
+                    'VT': 'Vermont',
+                    'VA': 'Virginia',
+                    'WA': 'Washington',
+                    'WV': 'West Virginia',
+                    'WI': 'Wisconsin',
+                    'WY': 'Wyoming',
+                }
 
                 function hover(d) {
                     d3.select(this).attr('stroke-width', '5px');
-                    textinfo.html("" + d["%diff_dem_favor"]);
                     textinfo.style("left", width - 125 + "px");
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
+                    textinfo.html(stateList[d.state_abbr] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
+
+                    // stateData.forEach(d => {
+                    //     textinfo.html(stateList[d.state_abbr] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
+                    //     // textinfo.html("" + d["%difference(d_favor)"] + " ");
+                    // });
+                }
+
+
+                function hover_c(d) {
+                    d3.select(d).attr('stroke-width', '5px');
+                    textinfo.style("left", width - 125 + "px");
+                    textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
+                    textinfo.style("display", "inline-block");
+                    textinfo.html("" + d["county"] + " ");
+
+                    // countyData.forEach(d => {
+                    //     textinfo.html("" + d["county"] + " ");
+                    //     // textinfo.html("" + d["%difference(d_favor)"] + " ");
+                    // });
                 }
 
                 function n_hover(d) {
-                    d3.select(this).attr('stroke-width', '1.5px');
+                    d3.select(d).attr('stroke-width', '1.5px');
                     textinfo.style("display", "none");
                 }
 
@@ -196,9 +271,9 @@
                     .attr("stroke", "black")
                     .attr("class", "county-boundary")
                     .attr('note', d => d.id)
-                    .on("click", reset)
-                    .on("mouseover", hover)
-                    .on("mouseout", n_hover);
+                    .on("mouseover", d => hover_c(d))
+                    .on("mouseout", d => n_hover(d))
+                    .on("click", reset);
 
                 g.append("g")
                     .attr("id", "states")
@@ -211,9 +286,8 @@
                     .attr("stroke", "black")
                     .attr("class", "state")
                     .attr("note", d => d.id)
-                    // .on("click", clicked);
-                    .on("mouseover", hover)
-                    .on("mouseout", n_hover)
+                    .on("mouseover", d => hover(d))
+                    .on("mouseout", d => n_hover(d))
                     .on("click", clicked);
 
 
