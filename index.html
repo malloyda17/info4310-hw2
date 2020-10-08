@@ -59,6 +59,28 @@
         font-size: 30px;
         margin-bottom: 15%;
     }
+
+    .legendDiv svg {
+        margin: auto;
+    }
+
+    .legendDiv {
+        position: absolute;
+        /* position: sticky; */
+        bottom: 0;
+        /* display: none; */
+        background: none repeat scroll 0 0 white;
+        box-shadow: -3px 3px 15px #888888;
+        color: black;
+        padding: 10px;
+        width: 900px;
+        height: 75px;
+        /* text-align: center; */
+        font-family: Helvetica, sans-serif;
+        line-height: 1.8;
+        border-radius: 5%;
+        margin-left: 25%;
+    }
 </style>
 
 <body>
@@ -122,7 +144,7 @@
                     d['percent_R'] = Number(d['%rep']);
                     d['id'] = Number(d['state_id']);
                     idToStatePercentLead[d.id] = d.D_percent_lead;
-                    d['state'] = d['state_name'];
+                    d['state'] = d['state'];
                     idToStateName[d.id] = d['state'];
                     idToStateDem[d.id] = Number(d['%dem']);
                     idToStateRep[d.id] = Number(d['%rep']);
@@ -150,10 +172,8 @@
                 });
 
 
-                const leadExtent = d3.extent(stateData, d => Number(d['D_percent_lead']));
+                // const leadExtent = d3.extent(stateData, d => Number(d['D_percent_lead']));
                 const countyLeadExtent = d3.extent(countyData, d => Number(d['D_percent_lead']));
-                console.log(leadExtent)
-                console.log(countyLeadExtent)
 
 
                 //-25 and below
@@ -176,7 +196,7 @@
                     }
                 }
                 const textinfo = d3.select("body").append("div").attr("class", "textinfo");
-
+                const legendDiv = d3.select('body').append("div").append('svg').attr("class", "legendDiv");
 
                 const stateList = {
                     'AL': 'Alabama',
@@ -236,7 +256,7 @@
                     textinfo.style("left", width - 125 + "px");
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
-                    console.log(d)
+                    // console.log(d)
                     textinfo.html("State: " + idToStateName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToStatePercentLead[d.id]) + " " + d['percent_D']);
                     textinfo.html("<p class='cs_h'> <u> State: <strong>" + idToStateName[d.id] + "</strong> </u> <br>" +
                         "Winner Lead by: <strong>" + Math.abs(idToStatePercentLead[d.id]) + "</strong> % <br> Total Votes: <strong>" +
@@ -347,8 +367,9 @@
 
 
 
-                const legend = g.append("g").attr('id', 'legend')
-                    .attr('transform', 'translate(' + (290) + ',' + (160) + ')');
+                const legend = legendDiv.append("g").attr('id', 'legend')
+                    .attr('transform', 'translate(' + (0) + ',' + (20) + ')');
+                // .attr('transform', 'translate(' + (290) + ',' + (160) + ')');
 
                 categories = ['+25-100%', '+1-25%', '', '+1-25%', '+25-100%']
 
