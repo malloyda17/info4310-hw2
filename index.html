@@ -43,7 +43,7 @@
 
 <body>
     <h3>Destiny Malloy (dam359), Marcella Imoisili (mii7)</h3>
-    <p id="p1"><strong>Visualization of Historical U.S. Poll Data </strong></br>
+    <p id="p1"><strong> 2016 Poll Data </strong></br>
         <svg id="viz" height="900" width="1500"></svg>
         <script>
             //python3 -m http.server
@@ -91,8 +91,8 @@
                 var stateData = await d3.csv('election_byState.csv');
                 console.log(stateData);
 
-                idToPercent = {}
-
+                idToStatePercentLead = {}
+                idToCountyPercentLead = {}
 
                 stateData.forEach(d => {
                     //d['stateCode'] = d['state_abbr'];
@@ -100,19 +100,33 @@
                     d['percent_D'] = Number(d['%dem']);
                     d['percent_R'] = Number(d['%rep']);
                     d['id'] = Number(d['state_id']);
-                    idToPercent[d.id] = d.D_percent_lead;
+                    idToStatePercentLead[d.id] = d.D_percent_lead;
 
                 });
 
                 //console.log(stateData);
 
+                var countyData = await d3.csv('electionResults_byCounty.csv');
+                console.log(countyData);
+
+                countyData.forEach(d => {
+                    d['D_percent_lead'] = Number(d['%difference(d_favor)']).toFixed(2);
+                    d['percent_D'] = Number(d['percent_democrat']);
+                    d['percent_R'] = Number(d['percent_republican']);
+                    d['FIPS'] = d.FIPS;
+                    idToCountyPercentLead[d.FIPS] = d['D_percent_lead']
+                })
+
+
                 const leadExtent = d3.extent(stateData, d => Number(d['D_percent_lead']));
+                const countyLeadExtent = d3.extent(countyData, d => Number(d['D_percent_lead']));
                 console.log(leadExtent)
+                console.log(countyLeadExtent)
 
                 // const colorScale = d3.scaleQuantize().domain(leadExtent)
                 //     .range(['#D93333', '#DE8181', '#DCD2D2', '#7A8FDD', '#3357DC']);
 
-                const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(leadExtent);
+                const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(countyLeadExtent);
 
 
                 function hover(d) {
@@ -164,10 +178,14 @@
                     .data(topojson.feature(us, us.objects.counties).features)
                     .enter().append("path")
                     .attr("d", path)
-                    .attr("fill", "#EBEBEB")
+                    // .attr("fill", "#EBEBEB")
+                    .attr('fill', d => colorScale(idToCountyPercentLead[d.id]))
                     .attr("stroke", "black")
                     .attr("class", "county-boundary")
-                    .on("click", reset);
+                    .attr('note', d => d.id)
+                    .on("click", reset)
+                    .on("mouseover", hover)
+                    .on("mouseout", n_hover);
 
                 g.append("g")
                     .attr("id", "states")
@@ -175,7 +193,7 @@
                     .data(topojson.feature(us, us.objects.states).features)
                     .enter().append("path")
                     .attr("d", path)
-                    .attr('fill', d => colorScale(idToPercent[d.id]))
+                    .attr('fill', d => colorScale(idToStatePercentLead[d.id]))
                     // .attr("fill", '#EBEBEB')
                     .attr("stroke", "black")
                     .attr("class", "state")
