@@ -12,27 +12,27 @@
 <style>
     h3 {
         font-size: 2.5vh;
-        text-align: center;
         font-family: Helvetica, sans-serif;
+        margin-left: 2vw;
     }
-
+    
     .background {
         fill: none;
         pointer-events: all;
     }
-
+    
     .county-boundary {
         stroke-width: .5px;
     }
-
+    
     .county-boundary:hover {
         stroke-width: 2.5px;
     }
-
+    
     #states .active {
         display: none;
     }
-
+    
     #state-borders {
         stroke-width: 1.5px;
         stroke-linejoin: round;
@@ -40,7 +40,7 @@
         pointer-events: none;
         fill: none;
     }
-
+    
     .textinfo {
         position: absolute;
         display: none;
@@ -55,36 +55,32 @@
         line-height: 1.8;
         border-radius: 5%;
     }
-
+    
     .cs_h {
         font-size: 2.6vh;
         margin-bottom: 10%;
     }
-
+    
     #viz {
         margin-top: -1.5vh;
     }
-
+    
     .legendDiv svg {
         margin: auto;
     }
-
+    
     .legendDiv {
         position: absolute;
-        /* position: sticky; */
-        bottom: 0;
-        /* display: none; */
         background: none repeat scroll 0 0 white;
         box-shadow: -3px 3px 15px #888888;
         color: black;
-        padding: 10px;
-        width: 900px;
-        height: 75px;
-        /* text-align: center; */
+        width: 55vw;
+        height: 8vh;
         font-family: Helvetica, sans-serif;
         line-height: 1.8;
-        border-radius: 5%;
-        margin-left: 25%;
+        border-radius: 2%;
+        top: 4vh;
+        right: 1.5vw;
     }
 </style>
 
@@ -108,7 +104,7 @@
                 left: 20
             };
 
-            const getData = async function () {
+            const getData = async function() {
 
                 const us = await d3.json('us.json');
 
@@ -148,7 +144,6 @@
 
 
                 stateData.forEach(d => {
-                    //d['stateCode'] = d['state_abbr'];
                     d['D_percent_lead'] = Number(d['%diff_dem_favor']).toFixed(2);
                     d['percent_D'] = Number(d['%dem']);
                     d['percent_R'] = Number(d['%rep']);
@@ -162,8 +157,6 @@
                     D_candidate_votesS[d.id] = d['D_candidate_votes'];
                     R_candidate_votesS[d.id] = d['R_candidate_votes'];
                 });
-
-                //console.log(stateData);
 
                 var countyData = await d3.csv('electionResults_byCounty.csv');
                 console.log(countyData);
@@ -269,7 +262,6 @@
                     textinfo.style("left", width - 70 + "px");
                     textinfo.style("top", (height / 2) - 35 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
-                    // console.log(d)
                     textinfo.html("State: " + idToStateName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToStatePercentLead[d.id]) + " " + d['percent_D']);
                     textinfo.html("<p class='cs_h'> <u> State: <strong>" + idToStateName[d.id] + "</strong> </u> <br>" +
                         "Winner Lead by: <strong>" + Math.abs(idToStatePercentLead[d.id]) + "</strong>% <br> Total Votes: <strong>" +
@@ -318,7 +310,7 @@
                     }
 
                     g.selectAll('path')
-                        .classed('active', active && function (d) {
+                        .classed('active', active && function(d) {
                             return d === active;
                         });
 
@@ -347,7 +339,6 @@
                     .data(topojson.feature(us, us.objects.counties).features)
                     .enter().append("path")
                     .attr("d", path)
-                    // .attr("fill", "#EBEBEB")
                     .attr('fill', d => colorScale(idToCountyPercentLead[d.id]))
                     .attr("stroke", "black")
                     .attr("class", "county-boundary")
@@ -363,7 +354,6 @@
                     .enter().append("path")
                     .attr("d", path)
                     .attr('fill', d => colorScale(idToStatePercentLead[d.id]))
-                    // .attr("fill", '#EBEBEB')
                     .attr("stroke", "black")
                     .attr("class", "state")
                     .attr("note", d => d.id)
@@ -373,7 +363,7 @@
 
 
                 g.append("path")
-                    .datum(topojson.mesh(us, us.objects.states, function (i, j) {
+                    .datum(topojson.mesh(us, us.objects.states, function(i, j) {
                         return i !== j;
                     }))
                     .attr('id', 'state-borders')
@@ -382,15 +372,14 @@
 
 
                 const legend = legendDiv.append("g").attr('id', 'legend')
-                    .attr('transform', 'translate(' + (0) + ',' + (20) + ')');
-                // .attr('transform', 'translate(' + (290) + ',' + (160) + ')');
+                    .attr('transform', 'translate(' + (0) + ',' + (20) + ')')
 
                 categories = ['+25-100%', '+1-25%', '', '+1-25%', '+25-100%']
 
                 categories.forEach((d, i) => {
                     colors = ['#de533e', '#ea9e8d', '#e2e2e2', '#9898de', '#1c54d6', '#de533e']
-                    // bar_widths = [75, 25, 1, 25, 75]
-                    //making bars
+                        // bar_widths = [75, 25, 1, 25, 75]
+                        //making bars
                     legend.append('rect')
                         .attr('x', (100 * i) + 200)
                         .attr('y', 10)
@@ -413,12 +402,6 @@
                     legend.append('text')
                         .text('Democrat')
                         .attr('transform', 'translate(' + (710) + ',' + (25) + ')') // legend.append('circle')
-                    //     // .attr('cx', 0)
-                    //     .attr('cx', (30 * i))
-                    //     // .attr('cy', (20 * i) - 4)
-                    //     .attr('cy', 0)
-                    //     .attr('r', 5)
-                    //     .style('fill', colors[i])
                 });
             };
             getData();
