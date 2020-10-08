@@ -10,9 +10,9 @@
 </head>
 
 <style>
-    h3,
-    p {
-        font-size: 22px;
+    h3 {
+        font-size: 2.5vh;
+        text-align: center;
     }
     
     .background {
@@ -47,8 +47,8 @@
         box-shadow: -3px 3px 15px #888888;
         color: black;
         padding: 10px;
-        width: 30%;
-        height: 35%;
+        width: 30vw;
+        height: 35vh;
         text-align: center;
         font-family: Helvetica, sans-serif;
         line-height: 1.8;
@@ -56,15 +56,19 @@
     }
     
     .cs_h {
-        font-size: 30px;
-        margin-bottom: 15%;
+        font-size: 2.6vh;
+        margin-bottom: 10%;
+    }
+    
+    #viz {
+        margin-top: -1.5vh;
     }
 </style>
 
 <body>
-    <h3>Destiny Malloy (dam359), Marcella Imoisili (mii7)</h3>
-    <p id='p1'><strong>2016 U.S. Poll Data </strong></br>
-        <svg id='viz' height='1100' width='1450'></svg>
+    <h3>Destiny Malloy (dam359), Marcella Imoisili (mii7)<br><br><strong>2016 U.S. Poll Data </strong></h3>
+    <p id='p1'>
+        <svg id='viz' height='750' width='950'></svg>
         <script>
             //python3 -m http.server
             const svg = d3.select('#viz');
@@ -233,8 +237,8 @@
 
                 function hover(d) {
                     d3.select(this).attr('stroke-width', '5px');
-                    textinfo.style("left", width - 125 + "px");
-                    textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
+                    textinfo.style("left", width - 70 + "px");
+                    textinfo.style("top", (height / 2) - 35 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                     console.log(d)
                     textinfo.html("State: " + idToStateName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToStatePercentLead[d.id]) + " " + d['percent_D']);
@@ -248,8 +252,8 @@
 
                 function hover_c(d) {
                     d3.select(this).attr('stroke-width', '5px');
-                    textinfo.style("left", width - 125 + "px");
-                    textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
+                    textinfo.style("left", width - 70 + "px");
+                    textinfo.style("top", (height / 2) - 35 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                     console.log(d)
                     textinfo.html("<p class='cs_h'> <u> County: <strong>" + idToCountyName[d.id] + "</strong> </u> <br>" +
