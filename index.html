@@ -45,12 +45,19 @@
         display: none;
         background: none repeat scroll 0 0 white;
         box-shadow: -3px 3px 15px #888888;
-        font: 12px;
         color: black;
         padding: 10px;
         width: 30%;
-        height: 30%;
+        height: 35%;
         text-align: center;
+        font-family: Helvetica, sans-serif;
+        line-height: 1.8;
+        border-radius: 5%;
+    }
+
+    .cs_h {
+        font-size: 30px;
+        margin-bottom: 15%;
     }
 </style>
 
@@ -99,6 +106,13 @@
                 idToStateRep = {}
                 idToStateDem = {}
                 idToCountyName = {}
+                totalvotesS = {}
+                totalvotesC = {}
+                D_candidate_votesS = {}
+                R_candidate_votesS = {}
+                D_candidate_votesC = {}
+                R_candidate_votesC = {}
+
 
 
                 stateData.forEach(d => {
@@ -110,8 +124,11 @@
                     idToStatePercentLead[d.id] = d.D_percent_lead;
                     d['state'] = d['state_name'];
                     idToStateName[d.id] = d['state'];
-                    idToStateDem[d.id] = Number(d['%dem']).toFixed(2);
-                    idToStateRep[d.id] = Number(d['%rep']).toFixed(2);
+                    idToStateDem[d.id] = Number(d['%dem']);
+                    idToStateRep[d.id] = Number(d['%rep']);
+                    totalvotesS[d.id] = d['totalvotes'];
+                    D_candidate_votesS[d.id] = d['D_candidate_votes'];
+                    R_candidate_votesS[d.id] = d['R_candidate_votes'];
                 });
 
                 //console.log(stateData);
@@ -126,6 +143,10 @@
                     d['FIPS'] = d.FIPS;
                     idToCountyPercentLead[d.FIPS] = d['D_percent_lead'];
                     idToCountyName[d.FIPS] = d['county'];
+                    totalvotesC[d.FIPS] = d['totalvotes'];
+                    D_candidate_votesC[d.FIPS] = d['D_candidate_votes'];
+                    R_candidate_votesC[d.FIPS] = d['R_candidate_votes'];
+
                 });
 
 
@@ -217,11 +238,11 @@
                     textinfo.style("display", "inline-block");
                     console.log(d)
                     textinfo.html("State: " + idToStateName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToStatePercentLead[d.id]) + " " + d['percent_D']);
-
-                    // stateData.forEach(d => {
-                    //     textinfo.html(stateList[d.state_abbr] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
-                    //     // textinfo.html("" + d["%difference(d_favor)"] + " ");
-                    // });
+                    textinfo.html("<p class='cs_h'> <u> State: <strong>" + idToStateName[d.id] + "</strong> </u> <br>" +
+                        "Winner Lead by: <strong>" + Math.abs(idToStatePercentLead[d.id]) + "</strong> % <br> Total Votes: <strong>" +
+                        Math.abs(totalvotesS[d.id]) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
+                        D_candidate_votesS[d.id] + "</strong> votes <br> Republican Candidate votes: <strong>" +
+                        R_candidate_votesS[d.id] + "</strong> votes </p>");
                 }
 
 
@@ -231,12 +252,11 @@
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                     console.log(d)
-                    textinfo.html("County: " + idToCountyName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToCountyPercentLead[d.id]) + "%");
-
-                    // countyData.forEach(d => {
-                    //     textinfo.html("" + d["county"] + " ");
-                    //     // textinfo.html("" + d["%difference(d_favor)"] + " ");
-                    // });
+                    textinfo.html("<p class='cs_h'> <u> County: <strong>" + idToCountyName[d.id] + "</strong> </u> <br>" +
+                        "Winner Lead by: <strong>" + Math.abs(idToCountyPercentLead[d.id]) + "</strong> % <br> Total Votes: <strong>" +
+                        Math.abs(totalvotesC[d.id]) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
+                        D_candidate_votesC[d.id] + "</strong> votes <br> Republican Candidate votes: <strong>" +
+                        R_candidate_votesC[d.id] + "</strong> votes </p>");
                 }
 
                 function n_hover(d) {
