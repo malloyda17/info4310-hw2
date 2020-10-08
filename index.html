@@ -272,7 +272,7 @@
                     // console.log(d)
                     textinfo.html("State: " + idToStateName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToStatePercentLead[d.id]) + " " + d['percent_D']);
                     textinfo.html("<p class='cs_h'> <u> State: <strong>" + idToStateName[d.id] + "</strong> </u> <br>" +
-                        "Winner Lead by: <strong>" + Math.abs(idToStatePercentLead[d.id]) + "</strong> % <br> Total Votes: <strong>" +
+                        "Winner Lead by: <strong>" + Math.abs(idToStatePercentLead[d.id]) + "</strong>% <br> Total Votes: <strong>" +
                         formatComma(Math.abs(totalvotesS[d.id])) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
                         formatComma(D_candidate_votesS[d.id]) + "</strong> votes <br> Republican Candidate votes: <strong>" +
                         formatComma(R_candidate_votesS[d.id]) + "</strong> votes </p>");
@@ -286,7 +286,7 @@
                     textinfo.style("display", "inline-block");
                     console.log(d)
                     textinfo.html("<p class='cs_h'> <u> County: <strong>" + idToCountyName[d.id] + "</strong> </u> <br>" +
-                        "Winner Lead by: <strong>" + Math.abs(idToCountyPercentLead[d.id]) + "</strong> % <br> Total Votes: <strong>" +
+                        "Winner Lead by: <strong>" + Math.abs(idToCountyPercentLead[d.id]) + "</strong>% <br> Total Votes: <strong>" +
                         formatComma(Math.abs(totalvotesC[d.id])) + "</strong> votes <br> Democratic Candidate votes: <strong>" +
                         formatComma(D_candidate_votesC[d.id]) + "</strong> votes <br> Republican Candidate votes: <strong>" +
                         formatComma(R_candidate_votesC[d.id]) + "</strong> votes  <br> Total Population: <strong>" +
