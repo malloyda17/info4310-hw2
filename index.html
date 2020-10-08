@@ -14,24 +14,24 @@
     p {
         font-size: 22px;
     }
-    
+
     .background {
         fill: none;
         pointer-events: all;
     }
-    
+
     .county-boundary {
         stroke-width: .5px;
     }
-    
+
     .county-boundary:hover {
         stroke-width: 2.5px;
     }
-    
+
     #states .active {
         display: none;
     }
-    
+
     #state-borders {
         stroke-width: 1.5px;
         stroke-linejoin: round;
@@ -39,7 +39,7 @@
         pointer-events: none;
         fill: none;
     }
-    
+
     .textinfo {
         position: absolute;
         display: none;
@@ -73,7 +73,7 @@
                 left: 20
             };
 
-            const getData = async function() {
+            const getData = async function () {
 
                 const us = await d3.json('us.json');
 
@@ -216,7 +216,7 @@
 
 
                 function hover_c(d) {
-                    d3.select(d).attr('stroke-width', '5px');
+                    d3.select(this).attr('stroke-width', '5px');
                     textinfo.style("left", width - 125 + "px");
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
@@ -229,7 +229,7 @@
                 }
 
                 function n_hover(d) {
-                    d3.select(d).attr('stroke-width', '1.5px');
+                    d3.select(this).attr('stroke-width', '1.5px');
                     textinfo.style("display", "none");
                 }
 
@@ -253,7 +253,7 @@
                     }
 
                     g.selectAll('path')
-                        .classed('active', active && function(d) {
+                        .classed('active', active && function (d) {
                             return d === active;
                         });
 
@@ -288,7 +288,7 @@
                     .attr("class", "county-boundary")
                     .attr('note', d => d.id)
                     .on("mouseover", d => hover_c(d))
-                    .on("mouseout", d => n_hover(d))
+                    .on("mouseout", n_hover)
                     .on("click", reset);
 
                 g.append("g")
@@ -303,12 +303,12 @@
                     .attr("class", "state")
                     .attr("note", d => d.id)
                     .on("mouseover", d => hover(d))
-                    .on("mouseout", d => n_hover(d))
+                    .on("mouseout", n_hover)
                     .on("click", clicked);
 
 
                 g.append("path")
-                    .datum(topojson.mesh(us, us.objects.states, function(i, j) {
+                    .datum(topojson.mesh(us, us.objects.states, function (i, j) {
                         return i !== j;
                     }))
                     .attr('id', 'state-borders')
