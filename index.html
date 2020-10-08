@@ -216,7 +216,7 @@
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                     console.log(d)
-                    textinfo.html("State: " + idToStateName[d.id] + " <br>" + "Winner Lead by: " + idToStatePercentLead[d.id] + " " + d['percent_D']);
+                    textinfo.html("State: " + idToStateName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToStatePercentLead[d.id]) + " " + d['percent_D']);
 
                     // stateData.forEach(d => {
                     //     textinfo.html(stateList[d.state_abbr] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
@@ -231,7 +231,7 @@
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                     console.log(d)
-                    textinfo.html("County: " + idToCountyName[d.id] + " <br>" + "Winner Lead by: " + idToCountyPercentLead[d.id] + "%");
+                    textinfo.html("County: " + idToCountyName[d.id] + " <br>" + "Winner Lead by: " + Math.abs(idToCountyPercentLead[d.id]) + "%");
 
                     // countyData.forEach(d => {
                     //     textinfo.html("" + d["county"] + " ");
