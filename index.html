@@ -13,25 +13,26 @@
     h3 {
         font-size: 2.5vh;
         text-align: center;
+        font-family: Helvetica, sans-serif;
     }
-
+    
     .background {
         fill: none;
         pointer-events: all;
     }
-
+    
     .county-boundary {
         stroke-width: .5px;
     }
-
+    
     .county-boundary:hover {
         stroke-width: 2.5px;
     }
-
+    
     #states .active {
         display: none;
     }
-
+    
     #state-borders {
         stroke-width: 1.5px;
         stroke-linejoin: round;
@@ -39,7 +40,7 @@
         pointer-events: none;
         fill: none;
     }
-
+    
     .textinfo {
         position: absolute;
         display: none;
@@ -54,7 +55,7 @@
         line-height: 1.8;
         border-radius: 5%;
     }
-
+    
     .cs_h {
         font-size: 2.6vh;
         margin-bottom: 10%;
@@ -66,7 +67,7 @@
 </style>
 
 <body>
-    <h3>Destiny Malloy (dam359), Marcella Imoisili (mii7)<br><br><strong>2016 U.S. Poll Data </strong></h3>
+    <h3>Destiny Malloy (dam359), Marcella Imoisili (mii7)<br><br><strong>Visualization of 2016 U.S. Poll Data </strong></h3>
     <p id='p1'>
         <svg id='viz' height='750' width='950'></svg>
         <script>
@@ -84,7 +85,7 @@
                 left: 20
             };
 
-            const getData = async function () {
+            const getData = async function() {
 
                 const us = await d3.json('us.json');
 
@@ -288,7 +289,7 @@
                     }
 
                     g.selectAll('path')
-                        .classed('active', active && function (d) {
+                        .classed('active', active && function(d) {
                             return d === active;
                         });
 
@@ -343,7 +344,7 @@
 
 
                 g.append("path")
-                    .datum(topojson.mesh(us, us.objects.states, function (i, j) {
+                    .datum(topojson.mesh(us, us.objects.states, function(i, j) {
                         return i !== j;
                     }))
                     .attr('id', 'state-borders')
@@ -358,8 +359,8 @@
 
                 categories.forEach((d, i) => {
                     colors = ['#de533e', '#ea9e8d', '#e2e2e2', '#9898de', '#1c54d6', '#de533e']
-                    // bar_widths = [75, 25, 1, 25, 75]
-                    //making bars
+                        // bar_widths = [75, 25, 1, 25, 75]
+                        //making bars
                     legend.append('rect')
                         .attr('x', (100 * i) + 200)
                         .attr('y', 10)
@@ -381,13 +382,13 @@
                         .attr('transform', 'translate(' + (90) + ',' + (25) + ')')
                     legend.append('text')
                         .text('Democrat')
-                        .attr('transform', 'translate(' + (710) + ',' + (25) + ')')                    // legend.append('circle')
-                    //     // .attr('cx', 0)
-                    //     .attr('cx', (30 * i))
-                    //     // .attr('cy', (20 * i) - 4)
-                    //     .attr('cy', 0)
-                    //     .attr('r', 5)
-                    //     .style('fill', colors[i])
+                        .attr('transform', 'translate(' + (710) + ',' + (25) + ')') // legend.append('circle')
+                        //     // .attr('cx', 0)
+                        //     .attr('cx', (30 * i))
+                        //     // .attr('cy', (20 * i) - 4)
+                        //     .attr('cy', 0)
+                        //     .attr('r', 5)
+                        //     .style('fill', colors[i])
                 });
             };
             getData();
