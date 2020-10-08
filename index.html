@@ -116,7 +116,28 @@
                 // const colorScale = d3.scaleQuantize().domain(leadExtent)
                 //     .range(['#D93333', '#DE8181', '#DCD2D2', '#7A8FDD', '#3357DC']);
 
-                const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(countyLeadExtent);
+
+                //-25 and below
+                //below -5
+                //above 5
+                //above 25
+                function colorScale(x) {
+                    if (x <= -25) {
+                        return '#de533e';
+                    } else if (x < -5) {
+                        return '#ea9e8d';
+                    } else if (x < 5) {
+                        return '#e2e2e2';
+                    } else if (x < 25) {
+                        return '#9898de';
+                    } else if (x >= 25) {
+                        return '#1c54d6';
+                    } else {
+                        console.log(x)
+                        return '#de533e';
+                    }
+                }
+                // const colorScale = d3.scaleSequential(d3.interpolateRdBu).domain(countyLeadExtent);
 
 
                 function hover(d) {
