@@ -213,7 +213,7 @@
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                     console.log(d)
-                    textinfo.html(idToStateName[d.id] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
+                    textinfo.html(idToStateName[d.id] + " <br>" + "Winner Lead by: " + idToStatePercentLead[d.id] + " " + d['percent_D']);
 
                     // stateData.forEach(d => {
                     //     textinfo.html(stateList[d.state_abbr] + " " + d["%diff_dem_favor"] + " " + d['percent_D']);
