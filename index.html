@@ -231,7 +231,7 @@
                     textinfo.style("top", (height / 2) - 50 + "px"); //adapted from http://bl.ocks.org/ndobie/90ae9f1a5c7f88ad4929 
                     textinfo.style("display", "inline-block");
                     console.log(d)
-                    textinfo.html("County: " + idToCountyName[d.id] + " <br>" + "Winner Lead by: ");
+                    textinfo.html("County: " + idToCountyName[d.id] + " <br>" + "Winner Lead by: " + idToCountyPercentLead[d.id] + "%");
 
                     // countyData.forEach(d => {
                     //     textinfo.html("" + d["county"] + " ");
